@@ -103,6 +103,45 @@ tr.open>*{border-bottom-style:dashed}
 footer{border-top:1px solid var(--hairline);max-width:72rem;margin:0 auto;padding:1.2rem 1.5rem 2rem}
 footer p{font-family:var(--mono);font-size:.75rem;color:var(--body-gray);margin:0}
 
+/* ---- Hero: Gracie -------------------------------------------------------
+   Small on purpose. A hairline rule and a panel tint, no filled colour block:
+   the house rule is that meaning travels in the text, and a hero that shouts
+   would be the first thing on the site to break it. */
+/* Gold, not orange, for the rule. Orange already means "you are here" in the nav and marks the
+   one key term per section; spending it on decoration would blunt it. Gold ties the rule to
+   Gracie's own voice bars, which is the only thing in the hero it should be pointing at. */
+.hero{display:flex;align-items:center;gap:1.4rem;margin:0 0 2.6rem;padding:1.1rem 1.3rem;
+      background:var(--panel);border-left:3px solid var(--gold)}
+.hero-art{flex:0 0 auto;line-height:0}
+.hero-copy{min-width:0}
+.hero-lead{font-size:1.18rem;line-height:1.35;margin:0!important;color:var(--navy)}
+.hero-sub{font-size:.95rem;line-height:1.55;margin:.45rem 0 0!important;color:var(--body-gray)}
+.hero-sub b{color:var(--navy)}
+
+.gracie{width:84px;height:auto;display:block}
+.g-head{fill:var(--navy)}
+.g-ear{fill:none;stroke:var(--steel);stroke-width:6;stroke-linecap:round}
+.g-eye{fill:var(--white)}
+/* `fill-box` re-bases the origin onto each bar's own box, so 50%/50% is that bar's centre.
+   Every bar is already centred on _VOICE_Y in site/pages/home.py, so scaling about its own
+   centre keeps the row growing symmetrically about the mouth line — and this stays correct if
+   the heights in _BARS change. Do not write a pixel origin here; it would be measured from the
+   bar, not from the drawing. */
+.g-bar{fill:var(--gold);transform-box:fill-box;transform-origin:50% 50%;
+       animation:g-talk 1.15s ease-in-out infinite alternate}
+.g-bar-0{animation-delay:-.00s}
+.g-bar-1{animation-delay:-.22s}
+.g-bar-2{animation-delay:-.44s}
+.g-bar-3{animation-delay:-.66s}
+.g-bar-4{animation-delay:-.88s}
+@keyframes g-talk{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
+
+/* Default to stillness for anyone who asked for it. The bars encode nothing, so the frozen
+   frame loses no information — which is the only reason animating them was acceptable. */
+@media (prefers-reduced-motion:reduce){
+  .g-bar{animation:none;transform:none}
+}
+
 @media (max-width:52rem){
   .layout{display:block}
   nav{border-right:0;border-bottom:1px solid var(--hairline);padding:1rem 0}
@@ -113,6 +152,9 @@ footer p{font-family:var(--mono);font-size:.75rem;color:var(--body-gray);margin:
   .band{margin-left:-1.5rem;margin-right:-1.5rem;padding:1.6rem 1.5rem}
   .masthead{padding-left:1.5rem;padding-right:1.5rem}
   .table-wrap table{min-width:40rem}
+  .hero{gap:1rem;padding:1rem}
+  .gracie{width:64px}
+  .hero-lead{font-size:1.05rem}
 }
 
 @media print{
