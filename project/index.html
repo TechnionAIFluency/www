@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project · 056413 AI Fluency and Agentic Methods for Engineers</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<p class="course-no">056413</p>
+<p class="course-title">AI Fluency and Agentic Methods for Engineers</p>
+<p class="course-sub">Technion · Winter 2026–27</p>
+</header>
+<div class="layout">
+<nav aria-label="Site"><ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../syllabus/index.html">Syllabus</a></li>
+<li><a href="../schedule/index.html">Schedule</a></li>
+<li><a href="../prework/index.html">Pre-work</a></li>
+<li><a href="../project/index.html" aria-current="page">Project</a></li>
+<li><a href="../lectures/index.html">Lectures</a></li>
+<li><a href="../exercises/index.html">Exercises</a></li>
+<li><a href="../resources/index.html">Resources</a></li>
+</ul></nav>
+<main id="main">
+<h1>Project</h1>
+<section id="overview" aria-labelledby="overview-h">
+<p class="eyebrow">Overview</p>
+<h2 id="overview-h">One project, six milestones</h2>
+<p>Every student carries one Posture C project through the semester: a language model reasoning over a tested <span class="key">deterministic ground</span>, in a propose, run, read, adjust loop. The ground is a solver, simulator or evaluator in your field that the agent can call and trust. The deliverable contract has six parts.</p>
+<ul><li>The agent and its wiring: harness configuration plus at least one custom tool, skill or subagent, with your ground exposed through an MCP server you author.</li><li>A real problem the loop solves: optimise, fit, search or design toward a target.</li><li>Unit tests on your ground and tools, run in CI. Unit tests only, no secrets, no live agent.</li><li>A local eval answering whether the loop reliably converges. It may call the model, so it runs locally and is not a CI gate.</li><li>A pull request submission, peer-reviewed.</li><li>A report: where you drew the line, model and cost choices, how you verified the code the agent wrote, failure modes, and your eval results.</li></ul>
+</section>
+<section id="criteria" aria-labelledby="criteria-h">
+<p class="eyebrow">Qualification</p>
+<h2 id="criteria-h">Qualifying your ground</h2>
+<p>Your ground must meet <span class="key">all six</span> criteria. Each has a test you can run yourself before you ask a human.</p>
+<div class="table-wrap"><table>
+<caption>The six qualification criteria and the test for each.</caption>
+<thead><tr>
+<th scope="col">#</th>
+<th scope="col">Criterion</th>
+<th scope="col">The test you run</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row"><span class="mono">1</span></th>
+<td>Importable in Python, and exposes a callable API</td>
+<td>Can you <code>import</code> it, or its Python client, and call it to get results with no GUI? Your agent reaches it through an MCP server you write, so a GUI or an opaque binary fails.</td>
+</tr>
+<tr>
+<th scope="row"><span class="mono">2</span></th>
+<td>Free tier or open source</td>
+<td>Is it open source, or free with an exposed API? What is the licence? Open source is strongly preferred.</td>
+</tr>
+<tr>
+<th scope="row"><span class="mono">3</span></th>
+<td>Deterministic</td>
+<td>Run the same input twice. Is the output the same? If it is stochastic, can you fix a seed to make it so?</td>
+</tr>
+<tr>
+<th scope="row"><span class="mono">4</span></th>
+<td>Bounded and fast</td>
+<td>Does one run take seconds rather than hours? Can it run dozens of times within a lab session? The agent runs it many times in a loop.</td>
+</tr>
+<tr>
+<th scope="row"><span class="mono">5</span></th>
+<td>Testable</td>
+<td>Can you write a <code>pytest</code> test with a known input and an asserted output? CI runs those tests.</td>
+</tr>
+<tr>
+<th scope="row"><span class="mono">6</span></th>
+<td>Non-trivial enough to need reasoning, but not so hard the loop cannot progress</td>
+<td>Is there a real search, fit or design problem where the model must interpret results and adjust? If a single call to the ground gives the final answer, it is a script, not an agent. And can a reasonable loop actually make progress toward a target?</td>
+</tr>
+</tbody></table></div>
+<aside class="callout warn"><p><strong class="label">Watch criterion 6.</strong> Criterion 6 is the one most candidate grounds fail, and it fails late. A ground can pass criteria 1 to 5 on day one and only show in practice that one call gives the whole answer, or that no loop of proposing and reading makes progress. You qualify your ground against all six in Week 6.</p></aside>
+<p>Auto-rejected anti-patterns:</p>
+<ul><li>Posture A: the model computes the answer itself, with no deterministic ground.</li><li>No loop: the model calls the ground once and you are done.</li><li>An ungrounded agent: much orchestration, nothing deterministic and tested underneath.</li><li>An untrustable ground: GUI-only, non-deterministic, or not unit-testable.</li><li>An unbounded ground: each run so slow the loop cannot iterate within a session.</li><li>A ground you do not understand and cannot judge the output of.</li></ul>
+</section>
+<section id="spec" aria-labelledby="spec-h">
+<p class="eyebrow">Specification</p>
+<h2 id="spec-h">The specification</h2>
+<p>You write <code><span class="key">docs/spec.md</span></code> in Week 6 (milestone P3). It must contain:</p>
+<div class="table-wrap"><table>
+<caption>Specification requirements.</caption>
+<thead><tr>
+<th scope="col">Requirement</th>
+<th scope="col">What it is</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">Goal</th>
+<td>What the loop is driving toward.</td>
+</tr>
+<tr>
+<th scope="row">Non-goals</th>
+<td>What you are deliberately not doing.</td>
+</tr>
+<tr>
+<th scope="row">Anti-goals</th>
+<td>What would make this a failure even if it technically works. The section people skip, and the one that catches scope drift.</td>
+</tr>
+<tr>
+<th scope="row">Boundary</th>
+<td>Where the line falls between what the model reasons about and what the ground computes.</td>
+</tr>
+<tr>
+<th scope="row">Success criteria</th>
+<td>How an answer is checked against the spec.</td>
+</tr>
+</tbody></table></div>
+<p>The Week 6 session also lists constraints among the spec contents.</p>
+</section>
+<section id="milestones" aria-labelledby="milestones-h">
+<p class="eyebrow">Milestones</p>
+<h2 id="milestones-h">Milestones</h2>
+<div class="table-wrap"><table>
+<caption>Milestones P1 to P6 and the week each falls due.</caption>
+<thead><tr>
+<th scope="col">Milestone</th>
+<th scope="col">Due</th>
+<th scope="col">Deliverable</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row"><strong class="mono">P1</strong></th>
+<td>Week 2</td>
+<td>Repo forked, Setup Gate passed, proposal-draft.md: the problem, the candidate ground, a first guess at the line</td>
+</tr>
+<tr>
+<th scope="row"><strong class="mono">P2</strong></th>
+<td>Week 4</td>
+<td>Harness running on your repo, wall proven to refuse, first agent-authored commit</td>
+</tr>
+<tr>
+<th scope="row"><strong class="mono">P3</strong></th>
+<td>Week 6</td>
+<td>AGENTS.md, domain GLOSSARY.md, one skill, docs/spec.md, ground qualified against the six criteria</td>
+</tr>
+<tr>
+<th scope="row"><strong class="mono">P4</strong></th>
+<td>Week 8</td>
+<td>Spec-derived tests green in CI; your MCP server, with the agent calling it</td>
+</tr>
+<tr>
+<th scope="row"><strong class="mono">P5</strong></th>
+<td>Week 10</td>
+<td>Intervention points declared, JSONL logging, one induced failure diagnosed from the log alone, first eval run</td>
+</tr>
+<tr>
+<th scope="row"><strong class="mono">P6</strong></th>
+<td>Week 12</td>
+<td>Red-team exchange closed, canonical run, demo video, tagged release, defence pack</td>
+</tr>
+</tbody></table></div>
+<p>Each milestone is an artefact that either exists at the week's tag or does not; CI checks it. Week 13 has nothing due. The full list is on the <a href="../schedule/index.html">schedule</a>.</p>
+</section>
+<section id="defence" aria-labelledby="defence-h">
+<p class="eyebrow">Defence</p>
+<h2 id="defence-h">The six defence questions</h2>
+<p>These are published in Week 1. Everyone must arrive ready to answer them about their own repository.</p>
+<ol><li>Where is the line, and why there rather than one step further in?</li><li>What did your eval's negative control do, and why that one?</li><li>Which constraint was binding at your best answer, and how do you know?</li><li>Show a failure you found, and say how you found it.</li><li>What did you delete, and why?</li><li>What would you change with another month?</li></ol>
+</section>
+</main>
+</div>
+<footer>
+<p>056413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2 h lecture + 2 h exercise per week · 2.5 credits. Built 2026-10-24.</p>
+</footer>
+</body>
+</html>

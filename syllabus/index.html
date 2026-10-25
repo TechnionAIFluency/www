@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syllabus · 056413 AI Fluency and Agentic Methods for Engineers</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<p class="course-no">056413</p>
+<p class="course-title">AI Fluency and Agentic Methods for Engineers</p>
+<p class="course-sub">Technion · Winter 2026–27</p>
+</header>
+<div class="layout">
+<nav aria-label="Site"><ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../syllabus/index.html" aria-current="page">Syllabus</a></li>
+<li><a href="../schedule/index.html">Schedule</a></li>
+<li><a href="../prework/index.html">Pre-work</a></li>
+<li><a href="../project/index.html">Project</a></li>
+<li><a href="../lectures/index.html">Lectures</a></li>
+<li><a href="../exercises/index.html">Exercises</a></li>
+<li><a href="../resources/index.html">Resources</a></li>
+</ul></nav>
+<main id="main">
+<h1>Syllabus</h1>
+<section id="course" aria-labelledby="course-h">
+<p class="eyebrow">Overview</p>
+<h2 id="course-h">The course</h2>
+<p>This course prepares engineering students to practice their discipline alongside AI agents, treating an agent as a component of engineering workflows. Students establish the scientific basis (neural networks, how LLMs differ from deterministic numerical methods), operate a modern professional scientific software stack (version control, code review, type checking, testing, CI), and perform key operations by hand before delegating, so they can verify and debug what the agent does. Each student builds a structured text-based input layer (YAML/JSON) driving a process simulation and an agent that operates on it: proposing design changes, invoking the simulator as a deterministic tool, reading results, and iterating toward an improved design under explicit constraints and human-in-the-loop checkpoints, targeting yield, energy efficiency, and/or selectivity. Every graduate ships at least one working agentic system that solves a real engineering or research problem in their own field. The course is offered by the Department of Chemical Engineering and open across the Technion, while case studies are adapted to other domains as needed.</p>
+<aside class="callout note"><p><strong class="label">Approved text.</strong> The paragraph above is the course description as approved by the university, reproduced word for word. Everything else on this site describes how the course delivers it.</p></aside>
+<p><strong>AI Fluency and Agentic Methods for Engineers</strong> is a <span class="key">one-semester</span> Technion graduate course of 13 weeks. 13 weeks · 2 h lecture + 2 h exercise per week · 2.5 credits. One lecturer and two teaching assistants.</p>
+<p>The week-by-week list, with every milestone, is on the <a href="../schedule/index.html">schedule</a>.</p>
+<div class="table-wrap"><table>
+<caption>The formal record, from the approved course proposal.</caption>
+<thead><tr>
+<th scope="col">Item</th>
+<th scope="col">Detail</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">Course number</th>
+<td>00560413</td>
+</tr>
+<tr>
+<th scope="row">Credit points</th>
+<td>2.5</td>
+</tr>
+<tr>
+<th scope="row">Weekly hours</th>
+<td>Lecture 2, exercise 2, homework 4</td>
+</tr>
+<tr>
+<th scope="row">Grade</th>
+<td>Numeric, determined by project work. There is no written final examination.</td>
+</tr>
+<tr>
+<th scope="row">Offered by</th>
+<td>The Department of Chemical Engineering, open across the Technion.</td>
+</tr>
+</tbody></table></div>
+<div class="table-wrap"><table>
+<caption>Course logistics. Entries marked to be confirmed are not yet fixed.</caption>
+<thead><tr>
+<th scope="col">Item</th>
+<th scope="col">Detail</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">Semester</th>
+<td>Winter 2026–27</td>
+</tr>
+<tr>
+<th scope="row">Meeting times</th>
+<td><span class="note">to be confirmed</span></td>
+</tr>
+<tr>
+<th scope="row">Room</th>
+<td><span class="note">to be confirmed</span></td>
+</tr>
+<tr>
+<th scope="row">Lecturer</th>
+<td><span class="note">to be confirmed</span></td>
+</tr>
+<tr>
+<th scope="row">Teaching assistants</th>
+<td><span class="note">to be confirmed</span></td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="prereq" aria-labelledby="prereq-h">
+<p class="eyebrow">Before Week 1</p>
+<h2 id="prereq-h">Prerequisites</h2>
+<ul><li><strong>02340128</strong> Introduction to Computing (Python).</li><li><strong>00540330</strong> Simulation Laboratory, for students of the Department of Chemical Engineering. Students of other departments take an equivalent simulation course, approved in advance.</li><li>Basic software engineering proficiency, supported by a self-paced preparatory workshop of about three weeks that must be completed before the semester begins. It is delivered as pre-work modules <code>B01</code> to <code>B08</code> and is not taught in the course: the Week 1 and Week 2 sessions verify it with teaching assistants in the room, <code>B01</code> to <code>B05</code> in Week 1 and <code>B06</code> to <code>B08</code> in Week 2, and the Week 2 Setup Gate is the proficiency check. See <a href="../prework/index.html">Pre-work</a>.</li><li>Python at reading fluency: reading fluency assumed, writing fluency not required. You will read agent-written Python and review a diff; you will not be asked to write it from scratch.</li></ul>
+</section>
+<section id="rhythm" aria-labelledby="rhythm-h">
+<p class="eyebrow">Structure</p>
+<h2 id="rhythm-h">Weekly rhythm</h2>
+<p>Every week has the <span class="key">same shape</span>, so a student never wonders what a session is for.</p>
+<div class="table-wrap"><table>
+<caption>The lecture: 4 blocks, 120 minutes.</caption>
+<thead><tr>
+<th scope="col">Block</th>
+<th scope="col">Min</th>
+<th scope="col">Content</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">Field update</th>
+<td><span class="mono">10</span></td>
+<td>What changed in the field in the last week. Open content.</td>
+</tr>
+<tr>
+<th scope="row">Concept</th>
+<td><span class="mono">70</span></td>
+<td>The week's idea, taught.</td>
+</tr>
+<tr>
+<th scope="row">Live build</th>
+<td><span class="mono">30</span></td>
+<td>The lecturer advances their own agent with this week's capability in front of the class, including what goes wrong.</td>
+</tr>
+<tr>
+<th scope="row">Your turn</th>
+<td><span class="mono">10</span></td>
+<td>Exactly what this week adds to your project.</td>
+</tr>
+<tr>
+<th scope="row"><strong>Total</strong></th>
+<td><span class="mono">120</span></td>
+<td></td>
+</tr>
+</tbody></table></div>
+<div class="table-wrap"><table>
+<caption>The exercise session: 3 blocks, 120 minutes.</caption>
+<thead><tr>
+<th scope="col">Block</th>
+<th scope="col">Min</th>
+<th scope="col">Content</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">Standup</th>
+<td><span class="mono">10</span></td>
+<td>Three students, two minutes each, screen-shared: where they are, what broke.</td>
+</tr>
+<tr>
+<th scope="row">Your project</th>
+<td><span class="mono">100</span></td>
+<td>This week's capability applied to your own project.</td>
+</tr>
+<tr>
+<th scope="row">Commit and disclose</th>
+<td><span class="mono">10</span></td>
+<td>Commit, push, one line in <code>docs/disclosure.md</code>; milestone checks run in CI.</td>
+</tr>
+<tr>
+<th scope="row"><strong>Total</strong></th>
+<td><span class="mono">120</span></td>
+<td></td>
+</tr>
+</tbody></table></div>
+<ul><li>Standup slots are assigned, not volunteered, and announced a week ahead. Three students present each week.</li><li>The <strong>Success and Failure gallery</strong> is not a weekly slot. It takes a session of its own in Weeks 3, 5, 7, 9 and 11, the week after each milestone falls due, and Week 13's showcase carries the last one. Successes are named and credited; failures are anonymised.</li><li><code>check-sandbox.sh</code> is demonstrated by a teaching assistant in Week 2 and handed to you to run yourself. It is not a weekly re-check and it is not wired into CI.</li><li>Week 12 is open in lecture content by design: a December decision picks a topic, never a format. Its exercise half is reserved for project build and the red-team exchange, as Week 11's is. Open lecture time is about 15% of lecture minutes — one open week plus the ten-minute field update in every taught lecture.</li></ul>
+</section>
+<section id="spine" aria-labelledby="spine-h">
+<p class="eyebrow">Project</p>
+<h2 id="spine-h">The project spine</h2>
+<p>Every student carries one project through the semester: a Posture C system, a language model reasoning over a tested deterministic ground in a propose, run, read, adjust loop.</p>
+<p>The project is delivered in six milestones, P1 to P6, on a two-week beat (Weeks 2, 4, 6, 8, 10, 12). Each falls due the week after the two lectures and two exercise sessions that build it. Week 13 has nothing due.</p>
+<p>Each milestone is checked by CI: the named artefact either exists at the week's tag or it does not.</p>
+<p>The question the project is graded on is where you draw the line between what the model reasons about and what the ground computes. You are asked it four times: a guess in Week 1, a qualification in Week 6, an implemented boundary in Week 8 and a defended claim in the report in Week 12.</p>
+<p>Details and the milestone dates are on the <a href="../project/index.html">Project</a> page.</p>
+</section>
+<section id="grades" aria-labelledby="grades-h">
+<p class="eyebrow">Assessment</p>
+<h2 id="grades-h">Grade composition</h2>
+<aside class="callout warn"><p><strong class="label">Provisional.</strong> These weights are not final. Three course documents state the composition differently and the lecturer has not yet ruled between them, so treat the table below as the current draft and not as the figure you are held to. This note is removed when the weights are ratified.</p></aside>
+<div class="table-wrap"><table>
+<caption>How the grade is composed. Provisional, pending ratification.</caption>
+<thead><tr>
+<th scope="col">Component</th>
+<th scope="col">Weight</th>
+<th scope="col">Covers</th>
+<th scope="col">Built in</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">Setup Gate (W2)</th>
+<td><span class="mono">10%</span></td>
+<td>The Week 2 gate, sat in the git, GitHub and Setup Gate exercise session.</td>
+<td>Pre-work, Weeks 1 and 2</td>
+</tr>
+<tr>
+<th scope="row">Working product</th>
+<td><span class="mono">40%</span></td>
+<td>The project, including its eval suite.</td>
+<td>Weeks 3 to 12</td>
+</tr>
+<tr>
+<th scope="row">In-class demo and live defence (W13)</th>
+<td><span class="mono">25%</span></td>
+<td>The 5-minute demo recorded in Week 12, and the live defence in Week 13.</td>
+<td>Week 12 recording, Week 13 defence</td>
+</tr>
+<tr>
+<th scope="row">Written report</th>
+<td><span class="mono">20%</span></td>
+<td>Where the line is, cost choices, verification, failure modes.</td>
+<td>Accumulated in Weeks 1, 6, 9 and 12</td>
+</tr>
+<tr>
+<th scope="row">Peer-review quality</th>
+<td><span class="mono">5%</span></td>
+<td>The quality of the review you give a peer.</td>
+<td>Red-team swap: opens Week 10, closes Week 12</td>
+</tr>
+<tr>
+<th scope="row"><strong>Total</strong></th>
+<td><strong class="mono">100%</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table></div>
+<p><strong>The <span class="key">live defence</span>.</strong> It is held in Week 13 and carries the following conditions, stated here in advance.</p>
+<ul><li>Students for the live defence are selected at random.</li><li>The questions are the six published in Week 1, listed on the <a href="../project/index.html">Project</a> page.</li><li>Everyone must arrive ready to defend their project, unscripted, before the whole course staff.</li><li>The defence confirms or revises the grade your artefacts already earned: a student who cannot account for their own work has the product, report and demo regraded against what they can actually account for.</li></ul>
+</section>
+</main>
+</div>
+<footer>
+<p>056413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2 h lecture + 2 h exercise per week · 2.5 credits. Built 2026-10-24.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home · 056413 AI Fluency and Agentic Methods for Engineers</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<p class="course-no">056413</p>
+<p class="course-title">AI Fluency and Agentic Methods for Engineers</p>
+<p class="course-sub">Technion · Winter 2026–27</p>
+</header>
+<div class="layout">
+<nav aria-label="Site"><ul>
+<li><a href="index.html" aria-current="page">Home</a></li>
+<li><a href="syllabus/index.html">Syllabus</a></li>
+<li><a href="schedule/index.html">Schedule</a></li>
+<li><a href="prework/index.html">Pre-work</a></li>
+<li><a href="project/index.html">Project</a></li>
+<li><a href="lectures/index.html">Lectures</a></li>
+<li><a href="exercises/index.html">Exercises</a></li>
+<li><a href="resources/index.html">Resources</a></li>
+</ul></nav>
+<main id="main">
+<h1>AI Fluency and Agentic Methods for Engineers</h1>
+<section id="what" aria-labelledby="what-h">
+<p class="eyebrow">Overview</p>
+<h2 id="what-h">What the course is</h2>
+<p><strong>AI Fluency and Agentic Methods for Engineers</strong> is a one-semester Technion graduate course: 13 weeks, each a two-hour lecture and a two-hour exercise session. It teaches engineers to work with language-model agents the way they already work with instruments: with a stated method, a <span class="key">failure model</span> and a check on every result.</p>
+<p>Each student carries one project through the whole semester, delivered in six milestones, <strong>P1</strong> to <strong>P6</strong>, on a two-week beat. The <a href="schedule/index.html">schedule</a> lists every week and every milestone.</p>
+</section>
+<section id="postures" aria-labelledby="postures-h">
+<p class="eyebrow">The spine</p>
+<h2 id="postures-h">Three postures</h2>
+<p><strong>Posture A</strong> is asking a model: you pose a question and judge the answer by eye. <strong>Posture B</strong> is writing a deterministic script: the result is repeatable, but the script cannot adapt to what it finds. In neither does a model decide anything that is checked.</p>
+<p><strong>Posture C</strong> is a model reasoning over a tested deterministic ground: the model proposes, the ground computes, the model reads and adjusts. Every project in this course is Posture C. The failure test applies all semester: delete the LLM and drop in a <code>for</code> loop. If it performs as well, you built Posture B with a chat interface. The model's part is the <span class="key">reasoning between runs</span>.</p>
+</section>
+<div class="band"><div class="band-inner">
+<figure class="">
+<svg class="loop" viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="loop-t loop-d">
+<title id="loop-t">The Posture C loop</title>
+<desc id="loop-d">A closed loop of four steps. One: the model proposes inputs. Two: the deterministic, tested ground runs, with no LLM involved. Three: the model reads the results. Four: the model reasons and adjusts, then returns to step one.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="head" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<path class="arrow" d="M 280 82 L 474 82" marker-end="url(#ah)"/>
+<text class="alabel" x="380" y="72" text-anchor="middle">inputs</text>
+<path class="arrow" d="M 600 124 L 600 230" marker-end="url(#ah)"/>
+<text class="alabel" x="612" y="184" text-anchor="start">results</text>
+<path class="arrow" d="M 480 278 L 286 278" marker-end="url(#ah)"/>
+<text class="alabel" x="380" y="268" text-anchor="middle">findings</text>
+<path class="arrow" d="M 160 236 L 160 130" marker-end="url(#ah)"/>
+<text class="alabel" x="148" y="184" text-anchor="end">revised inputs</text>
+<g class="node"><rect x="40" y="40" width="240" height="84"/><text class="tag" x="54" y="64">01 · MODEL</text><text class="name" x="54" y="89">propose inputs</text><text class="sub" x="54" y="109">parameters, config, a hypothesis</text></g>
+<g class="node ground"><rect x="480" y="40" width="240" height="84"/><text class="tag" x="494" y="64">02 · GROUND</text><text class="name" x="494" y="89">run the ground</text><text class="sub" x="494" y="109">deterministic · tested · no LLM</text></g>
+<g class="node"><rect x="480" y="236" width="240" height="84"/><text class="tag" x="494" y="260">03 · MODEL</text><text class="name" x="494" y="285">read results</text><text class="sub" x="494" y="305">what the ground returned</text></g>
+<g class="node"><rect x="40" y="236" width="240" height="84"/><text class="tag" x="54" y="260">04 · MODEL</text><text class="name" x="54" y="285">reason and adjust</text><text class="sub" x="54" y="305">then back to 01</text></g>
+<text class="centre" x="380" y="176" text-anchor="middle">POSTURE C</text>
+<text class="centre-sub" x="380" y="198" text-anchor="middle">a model reasoning</text>
+<text class="centre-sub" x="380" y="214" text-anchor="middle">over a tested ground</text>
+</svg>
+<figcaption><span class="fignum">Fig. 1</span> The Posture C loop. Steps 01, 03 and 04 belong to the model; step 02 is deterministic, tested code with no LLM in it.</figcaption>
+</figure>
+</div></div>
+<section id="due" aria-labelledby="due-h">
+<p class="eyebrow">Now</p>
+<h2 id="due-h">Due next</h2>
+<div class="table-wrap"><table>
+<caption>Next milestone</caption>
+<thead><tr>
+<th scope="col">Milestone</th>
+<th scope="col">Due</th>
+<th scope="col">Deliverable</th>
+</tr></thead><tbody>
+<tr class="hl">
+<th scope="row"><span class="mono">P1</span></th>
+<td>Week 2</td>
+<td>Repo forked, Setup Gate passed, proposal-draft.md: the problem, the candidate ground, a first guess at the line</td>
+</tr>
+</tbody></table></div>
+<p>Pre-work modules <code>B01</code> to <code>B08</code> are expected complete <span class="key">before Week 1</span>. The full list of dates is on the <a href="schedule/index.html">schedule</a>.</p>
+</section>
+</main>
+</div>
+<footer>
+<p>056413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2 h lecture + 2 h exercise per week · 2.5 credits. Built 2026-10-24.</p>
+</footer>
+</body>
+</html>
