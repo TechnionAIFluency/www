@@ -118,26 +118,25 @@ footer p{font-family:var(--mono);font-size:.75rem;color:var(--body-gray);margin:
 .hero-sub{font-size:.95rem;line-height:1.55;margin:.45rem 0 0!important;color:var(--body-gray)}
 .hero-sub b{color:var(--navy)}
 
-.gracie{width:84px;height:auto;display:block}
-.g-head{fill:var(--navy)}
-.g-ear{fill:none;stroke:var(--steel);stroke-width:6;stroke-linecap:round}
-.g-eye{fill:var(--white)}
-/* `fill-box` re-bases the origin onto each bar's own box, so 50%/50% is that bar's centre.
-   Every bar is already centred on _VOICE_Y in site/pages/home.py, so scaling about its own
-   centre keeps the row growing symmetrically about the mouth line — and this stays correct if
-   the heights in _BARS change. Do not write a pixel origin here; it would be measured from the
-   bar, not from the drawing. */
-.g-bar{fill:var(--gold);transform-box:fill-box;transform-origin:50% 50%;
-       animation:g-talk 1.15s ease-in-out infinite alternate}
-.g-bar-0{animation-delay:-.00s}
-.g-bar-1{animation-delay:-.22s}
-.g-bar-2{animation-delay:-.44s}
-.g-bar-3{animation-delay:-.66s}
-.g-bar-4{animation-delay:-.88s}
-@keyframes g-talk{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
+.gracie{width:104px;height:auto;display:block}
+/* Gracie's mark is drawn with strokes, like the master icon: pills, not slabs. */
+.g-bar{fill:none;stroke:var(--navy);stroke-width:6.2}
+.g-bar-2{stroke:var(--gold)}
+/* The bars breathe. `fill-box` puts each bar's origin at its own centre, so the row grows
+   about the shared centre line the way the logo is built; `non-scaling-stroke` on the rects
+   keeps the outline from fattening as they scale, which is what would make a traced logo stop
+   looking like the logo. Phases are offset so it reads as a voice and not a heartbeat. */
+.g-bar{transform-box:fill-box;transform-origin:50% 50%;
+       animation:g-talk 1.5s ease-in-out infinite alternate}
+.g-bar-0{animation-delay:-.95s}
+.g-bar-1{animation-delay:-.35s}
+.g-bar-2{animation-delay:-.70s}
+.g-bar-3{animation-delay:-.15s}
+.g-bar-4{animation-delay:-.55s}
+/* Floor at .78, not lower. This is a brand mark before it is a toy: at .62 the two short outer
+   pills collapse to circles and the thing stops being Gracie's logo while it moves. */
+@keyframes g-talk{from{transform:scaleY(.78)}to{transform:scaleY(1)}}
 
-/* Default to stillness for anyone who asked for it. The bars encode nothing, so the frozen
-   frame loses no information — which is the only reason animating them was acceptable. */
 @media (prefers-reduced-motion:reduce){
   .g-bar{animation:none;transform:none}
 }

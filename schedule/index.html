@@ -29,7 +29,7 @@
 <section id="weeks" aria-labelledby="weeks-h">
 <p class="eyebrow">Schedule</p>
 <h2 id="weeks-h">Thirteen weeks</h2>
-<p>Each week is a two-hour lecture and a two-hour exercise. Week 12 is <span class="key">open</span> in lecture content by design; its exercise half is reserved for project build and the red-team exchange.</p>
+<p>Each week is a two-hour lecture and a two-hour exercise, both in the same shape every week — the <a href="../syllabus/index.html#rhythm">weekly rhythm</a> has the blocks and their minutes. Week 12 is <span class="key">open</span> in lecture content by design; its exercise half is project build and the red-team exchange.</p>
 <div class="table-wrap"><table class="schedule">
 <caption>The 13 weeks. Shaded rows carry a milestone; each milestone falls due the week after the two lectures and two exercise sessions that build it.</caption>
 <thead><tr>
@@ -48,7 +48,7 @@
 <th scope="row"><span class="mono">W02</span></th>
 <td>LLM science</td>
 <td>git, GitHub, and the Setup Gate</td>
-<td><strong class="mono">P1</strong> Repo forked, Setup Gate passed, proposal-draft.md: the problem, the candidate ground, a first guess at the line</td>
+<td><strong class="mono">P1</strong> Problem statement; GitHub user registered with course staff; first merged PR</td>
 </tr>
 <tr>
 <th scope="row"><span class="mono">W03</span></th>
@@ -60,7 +60,7 @@
 <th scope="row"><span class="mono">W04</span></th>
 <td>Containment</td>
 <td>Build the wall</td>
-<td><strong class="mono">P2</strong> Harness running on your repo, wall proven to refuse, first agent-authored commit</td>
+<td><strong class="mono">P2</strong> First agent-authored commit</td>
 </tr>
 <tr>
 <th scope="row"><span class="mono">W05</span></th>
@@ -72,7 +72,7 @@
 <th scope="row"><span class="mono">W06</span></th>
 <td>Grill → spec</td>
 <td>Be grilled</td>
-<td><strong class="mono">P3</strong> AGENTS.md, domain GLOSSARY.md, one skill, docs/spec.md, ground qualified against the six criteria</td>
+<td><strong class="mono">P3</strong> Agent environment file (<code>AGENTS.md</code>); domain glossary (<code>GLOSSARY.md</code>); one written skill; written specification (<code>docs/spec.md</code>). Last chance to consider a project revision</td>
 </tr>
 <tr>
 <th scope="row"><span class="mono">W07</span></th>
@@ -84,7 +84,7 @@
 <th scope="row"><span class="mono">W08</span></th>
 <td>Tools</td>
 <td>Your MCP server</td>
-<td><strong class="mono">P4</strong> Spec-derived tests green in CI; your MCP server, with the agent calling it</td>
+<td><strong class="mono">P4</strong> One real engineering tool connected and in use; specification-derived tests green in CI</td>
 </tr>
 <tr>
 <th scope="row"><span class="mono">W09</span></th>
@@ -96,7 +96,7 @@
 <th scope="row"><span class="mono">W10</span></th>
 <td>Verification</td>
 <td>Build your eval, and open the red-team swap</td>
-<td><strong class="mono">P5</strong> Intervention points declared, JSONL logging, one induced failure diagnosed from the log alone, first eval run</td>
+<td><strong class="mono">P5</strong> Declared intervention points; structured logging; one induced failure diagnosed from the log alone; first evaluation run</td>
 </tr>
 <tr>
 <th scope="row"><span class="mono">W11</span></th>
@@ -108,7 +108,7 @@
 <th scope="row"><span class="mono">W12</span></th>
 <td><strong>Open</strong> <span class="note">topic decided in December</span></td>
 <td>Open: project build, and the red-team exchange</td>
-<td><strong class="mono">P6</strong> Red-team exchange closed, canonical run, demo video, tagged release, defence pack</td>
+<td><strong class="mono">P6</strong> Evaluation suite; red-team exchange closed with a peer; canonical run; demo; tagged release; defence pack</td>
 </tr>
 <tr>
 <th scope="row"><span class="mono">W13</span></th>
@@ -117,56 +117,13 @@
 <td><span class="note">Nothing due: a milestone in the same week as an examination is how students end up doing neither well.</span></td>
 </tr>
 </tbody></table></div>
-<aside class="callout note"><p><strong class="label">The beat.</strong> Milestones fall due in weeks 2, 4, 6, 8, 10 and 12, and each is reviewed in the Success and Failure gallery the week after. Week 13 has nothing due: it carries the showcase and the defence audit.</p></aside>
 <aside class="callout note"><p><strong class="label">Week 12.</strong> Deliberately open: a December decision picks a topic, never a format. The exercise half is reserved for project build and the red-team exchange, so the structure is fixed even while the content is not.</p></aside>
 <aside class="callout warn"><p><strong class="label">The revision gate.</strong> Week 6 is the revision gate. A ground that fails criterion 4 or criterion 6 is pivoted there, in the pivot clinic, with a TA's approval. Later is too late: P6 falls due in week 12, so a ground adopted after week 6 has no weeks left to carry a project onto it.</p></aside>
-</section>
-<section id="standing" aria-labelledby="standing-h">
-<p class="eyebrow">Every week</p>
-<h2 id="standing-h">The fixed session structure</h2>
-<p>Both halves of every week carry <span class="key">standing slots</span>. They are not topics and spend no topic slot: this is what a session looks like before any content is placed in it.</p>
-<div class="table-wrap"><table>
-<caption>Lecture — the fixed slots inside the 120 minutes.</caption>
-<thead><tr>
-<th scope="col">Slot</th>
-<th scope="col">Length</th>
-<th scope="col">What it is</th>
-</tr></thead><tbody>
-<tr>
-<th scope="row">Field update</th>
-<td><span class="mono">10 min</span></td>
-<td>What moved in the field this week. Part of the deliberately open fifth of the syllabus.</td>
-</tr>
-</tbody></table></div>
-<div class="table-wrap"><table>
-<caption>Exercise — the fixed slots inside the 120 minutes.</caption>
-<thead><tr>
-<th scope="col">Slot</th>
-<th scope="col">Length</th>
-<th scope="col">What it is</th>
-</tr></thead><tbody>
-<tr>
-<th scope="row">Standup</th>
-<td><span class="mono">10 min</span></td>
-<td>Three students, two minutes each, screen-shared: where they are, what broke. This is what surfaces the gallery material.</td>
-</tr>
-<tr>
-<th scope="row">Your project</th>
-<td><span class="mono">100 min</span></td>
-<td>This week's capability applied to your own project.</td>
-</tr>
-<tr>
-<th scope="row">Commit and disclose</th>
-<td><span class="mono">10 min</span></td>
-<td>Commit, push, one line in docs/disclosure.md; milestone checks run in CI.</td>
-</tr>
-</tbody></table></div>
-<p>The Success and Failure gallery is not a weekly slot. It has its own session in weeks 3, 5, 7, 9 and 11 — the week after each milestone falls due — and week 13's showcase carries P6's. Successes are named and credited; failures are anonymised.</p>
 </section>
 </main>
 </div>
 <footer>
-<p>00560413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2 h lecture + 2 h exercise per week · 2.5 credits. Updated 2026-10-24.</p>
+<p>00560413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2 h lecture + 2 h exercise per week · 2.5 credits. Updated 2026-10-26.</p>
 </footer>
 </body>
 </html>

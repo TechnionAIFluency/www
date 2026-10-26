@@ -29,9 +29,8 @@
 <section id="course" aria-labelledby="course-h">
 <p class="eyebrow">Overview</p>
 <h2 id="course-h">The course</h2>
-<p>This course prepares engineering students to practice their discipline alongside AI agents, treating an agent as a component of engineering workflows. Students establish the scientific basis (neural networks, how LLMs differ from deterministic numerical methods), operate a modern professional scientific software stack (version control, code review, type checking, testing, CI), and perform key operations by hand before delegating, so they can verify and debug what the agent does. Each student builds a structured text-based input layer (YAML/JSON) driving a process simulation and an agent that operates on it: proposing design changes, invoking the simulator as a deterministic tool, reading results, and iterating toward an improved design under explicit constraints and human-in-the-loop checkpoints, targeting yield, energy efficiency, and/or selectivity. Every graduate ships at least one working agentic system that solves a real engineering or research problem in their own field. The course is offered by the Department of Chemical Engineering and open across the Technion, while case studies are adapted to other domains as needed.</p>
-<aside class="callout note"><p><strong class="label">Approved text.</strong> The paragraph above is the course description as approved by the university, reproduced word for word. Everything else on this site describes how the course delivers it.</p></aside>
-<p><strong>AI Fluency and Agentic Methods for Engineers</strong> is a <span class="key">one-semester</span> Technion graduate course of 13 weeks. 13 weeks · 2 h lecture + 2 h exercise per week · 2.5 credits. One lecturer and two teaching assistants.</p>
+<p>This course prepares students to practice their discipline alongside AI agents, treating an agent as a component of engineering workflows. Students establish the scientific basis (neural networks, how LLMs differ from deterministic numerical methods), operate a modern professional scientific software stack (version control, code review, type checking, testing, CI), and perform key operations by hand before delegating, so they can verify and debug what the agent does. Each student builds a structured input layer driving a process simulation and an agent that operates on it: proposing design changes, invoking the simulator as a deterministic tool, reading results, and iterating toward an improved design under explicit constraints and human-in-the-loop checkpoints, targeting yield, energy efficiency, and/or selectivity. Every graduate ships at least one working agentic system that solves a real engineering or research problem in their own field. The course is offered by the Department of Chemical Engineering and open across the Technion, while case studies are adapted to other domains as needed. The course uses open-source and free-tier tooling wherever possible.</p>
+<aside class="callout note"><p><strong class="label">Approved text.</strong> The paragraph above is the course description from the approved syllabus, reproduced word for word. Everything else on this site describes how the course delivers it.</p></aside>
 <p>The week-by-week list, with every milestone, is on the <a href="../schedule/index.html">schedule</a>.</p>
 <div class="table-wrap"><table>
 <caption>The formal record, from the approved course proposal.</caption>
@@ -48,6 +47,14 @@
 <td>2.5</td>
 </tr>
 <tr>
+<th scope="row">Length</th>
+<td>13 weeks, one semester</td>
+</tr>
+<tr>
+<th scope="row">Staff</th>
+<td>One lecturer and two teaching assistants</td>
+</tr>
+<tr>
 <th scope="row">Weekly hours</th>
 <td>Lecture 2, exercise 2, homework 4</td>
 </tr>
@@ -61,7 +68,7 @@
 </tr>
 </tbody></table></div>
 <div class="table-wrap"><table>
-<caption>Course logistics. Entries marked to be confirmed are not yet fixed.</caption>
+<caption>Course logistics, from the approved syllabus.</caption>
 <thead><tr>
 <th scope="col">Item</th>
 <th scope="col">Detail</th>
@@ -71,27 +78,32 @@
 <td>Winter 2026–27</td>
 </tr>
 <tr>
-<th scope="row">Meeting times</th>
-<td><span class="note">to be confirmed</span></td>
+<th scope="row">Lectures</th>
+<td>Monday 08:30–10:30, Ulman 803</td>
 </tr>
 <tr>
-<th scope="row">Room</th>
-<td><span class="note">to be confirmed</span></td>
+<th scope="row">Exercises</th>
+<td>Monday 10:30–12:30, Ulman 501 and 703, two groups in parallel</td>
 </tr>
 <tr>
 <th scope="row">Lecturer</th>
-<td><span class="note">to be confirmed</span></td>
+<td>Assoc. Prof. Alon Grinberg Dana, Chemical Engineering, room 366</td>
 </tr>
 <tr>
 <th scope="row">Teaching assistants</th>
-<td><span class="note">to be confirmed</span></td>
+<td>Mr. Ori Goldfryd and Mr. Ramzy Ayan</td>
+</tr>
+<tr>
+<th scope="row">Reception hours</th>
+<td>All staff: by advance coordination over email</td>
 </tr>
 </tbody></table></div>
 </section>
 <section id="prereq" aria-labelledby="prereq-h">
 <p class="eyebrow">Before Week 1</p>
 <h2 id="prereq-h">Prerequisites</h2>
-<ul><li><strong>02340128</strong> Introduction to Computing (Python).</li><li><strong>00540330</strong> Simulation Laboratory, for students of the Department of Chemical Engineering. Students of other departments take an equivalent simulation course, approved in advance.</li><li>Basic software engineering proficiency, supported by a self-paced preparatory workshop of about three weeks that must be completed before the semester begins. It is delivered as pre-work modules <code>B01</code> to <code>B08</code> and is not taught in the course: the Week 1 and Week 2 sessions verify it with teaching assistants in the room, <code>B01</code> to <code>B05</code> in Week 1 and <code>B06</code> to <code>B08</code> in Week 2, and the Week 2 Setup Gate is the proficiency check. See <a href="../prework/index.html">Pre-work</a>.</li><li>Python at reading fluency: reading fluency assumed, writing fluency not required. You will read agent-written Python and review a diff; you will not be asked to write it from scratch.</li></ul>
+<ul><li><strong>02340128</strong> Introduction to Computing (Python).</li><li><strong>00540330</strong> Simulation Laboratory, for students of the Department of Chemical Engineering. Students of other departments take an equivalent simulation course, approved in advance.</li><li>Basic software engineering proficiency. It is not taught in the course: it comes from the self-paced pre-work modules <code>B01</code> to <code>B08</code>, due before Week 1, verified with teaching assistants in the room in Weeks 1 and 2. The Week 2 Setup Gate is the proficiency check. See <a href="../prework/index.html">Pre-work</a>.</li><li>Python at reading fluency. You will read agent-written Python and review a diff; you will not be asked to write it from scratch.</li></ul>
+<p>Verifying that the prerequisites are met is the student's responsibility.</p>
 </section>
 <section id="rhythm" aria-labelledby="rhythm-h">
 <p class="eyebrow">Structure</p>
@@ -158,23 +170,20 @@
 <td></td>
 </tr>
 </tbody></table></div>
-<ul><li>Standup slots are assigned, not volunteered, and announced a week ahead. Three students present each week.</li><li>The <strong>Success and Failure gallery</strong> is not a weekly slot. It takes a session of its own in Weeks 3, 5, 7, 9 and 11, the week after each milestone falls due, and Week 13's showcase carries the last one. Successes are named and credited; failures are anonymised.</li><li><code>check-sandbox.sh</code> is demonstrated by a teaching assistant in Week 2 and handed to you to run yourself. It is not a weekly re-check and it is not wired into CI.</li><li>Week 12 is open in lecture content by design: a December decision picks a topic, never a format. Its exercise half is reserved for project build and the red-team exchange, as Week 11's is. Open lecture time is about 15% of lecture minutes — one open week plus the ten-minute field update in every taught lecture.</li></ul>
+<ul><li>Standup slots are assigned, not volunteered, and announced a week ahead. Three students present each week.</li><li>The <strong>Success and Failure gallery</strong> has a session of its own in Weeks 3, 5, 7, 9 and 11 — the week after each milestone falls due — and Week 13's showcase carries the last. Successes are named and credited; failures are anonymised.</li><li><code>check-sandbox.sh</code> is demonstrated by a teaching assistant in Week 2 and handed to you to run yourself. It is not a weekly re-check and not wired into CI.</li><li>Week 12's lecture content is open by design; its exercise half, like Week 11's, is project build and the red-team exchange. Open lecture time is about 15% of lecture minutes.</li></ul>
 </section>
 <section id="spine" aria-labelledby="spine-h">
 <p class="eyebrow">Project</p>
 <h2 id="spine-h">The project spine</h2>
-<p>Every student carries one project through the semester: a Posture C system, a language model reasoning over a tested deterministic ground in a propose, run, read, adjust loop.</p>
-<p>The project is delivered in six milestones, P1 to P6, on a two-week beat (Weeks 2, 4, 6, 8, 10, 12). Each falls due the week after the two lectures and two exercise sessions that build it. Week 13 has nothing due.</p>
-<p>Each milestone is checked by CI: the named artefact either exists at the week's tag or it does not.</p>
-<p>The question the project is graded on is where you draw the line between what the model reasons about and what the ground computes. You are asked it four times: a guess in Week 1, a qualification in Week 6, an implemented boundary in Week 8 and a defended claim in the report in Week 12.</p>
+<p>Every student carries one project through the semester: a Posture C system, a language model reasoning over a tested deterministic ground in a propose, run, read, adjust loop. It is delivered in six milestones on a two-week beat, and CI checks each one — the named artefact either exists at that week's tag or it does not.</p>
+<p>The question it is graded on is where you draw the line between what the model reasons about and what the ground computes. You are asked it four times: a guess in Week 1, a qualification in Week 6, an implemented boundary in Week 8 and a defended claim in the Week 12 report.</p>
 <p>Details and the milestone dates are on the <a href="../project/index.html">Project</a> page.</p>
 </section>
 <section id="grades" aria-labelledby="grades-h">
 <p class="eyebrow">Assessment</p>
 <h2 id="grades-h">Grade composition</h2>
-<aside class="callout warn"><p><strong class="label">Provisional.</strong> These weights are not final. Three course documents state the composition differently and the lecturer has not yet ruled between them, so treat the table below as the current draft and not as the figure you are held to. This note is removed when the weights are ratified.</p></aside>
 <div class="table-wrap"><table>
-<caption>How the grade is composed. Provisional, pending ratification.</caption>
+<caption>How the grade is composed, as ratified by the approved syllabus.</caption>
 <thead><tr>
 <th scope="col">Component</th>
 <th scope="col">Weight</th>
@@ -196,8 +205,8 @@
 <tr>
 <th scope="row">In-class demo and live defence (W13)</th>
 <td><span class="mono">25%</span></td>
-<td>The 5-minute demo recorded in Week 12, and the live defence in Week 13.</td>
-<td>Week 12 recording, Week 13 defence</td>
+<td>The in-class demo and the live defence, both held in Week 13. Not everyone is called: the students who defend are selected at random, and everyone must be ready.</td>
+<td>Prepared with P6 in Week 12, held in Week 13</td>
 </tr>
 <tr>
 <th scope="row">Written report</th>
@@ -219,12 +228,12 @@
 </tr>
 </tbody></table></div>
 <p><strong>The <span class="key">live defence</span>.</strong> It is held in Week 13 and carries the following conditions, stated here in advance.</p>
-<ul><li>Students for the live defence are selected at random.</li><li>The questions are the six published in Week 1, listed on the <a href="../project/index.html">Project</a> page.</li><li>Everyone must arrive ready to defend their project, unscripted, before the whole course staff.</li><li>The defence confirms or revises the grade your artefacts already earned: a student who cannot account for their own work has the product, report and demo regraded against what they can actually account for.</li></ul>
+<ul><li>Not every student is called. The syllabus's own words are "not all, random selection": the students who demonstrate and defend in Week 13 are drawn at random.</li><li>The questions are the six published in Week 1, listed on the <a href="../project/index.html">Project</a> page.</li><li>Everyone must arrive ready to defend their project, unscripted, before the whole course staff.</li><li>The defence confirms or revises the grade your artefacts already earned: a student who cannot account for their own work has the product, report and demo regraded against what they can actually account for.</li></ul>
 </section>
 </main>
 </div>
 <footer>
-<p>00560413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2 h lecture + 2 h exercise per week · 2.5 credits. Updated 2026-10-24.</p>
+<p>00560413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2 h lecture + 2 h exercise per week · 2.5 credits. Updated 2026-10-26.</p>
 </footer>
 </body>
 </html>
