@@ -127,15 +127,44 @@ footer p{font-family:var(--mono);font-size:.75rem;color:var(--body-gray);margin:
    keeps the outline from fattening as they scale, which is what would make a traced logo stop
    looking like the logo. Phases are offset so it reads as a voice and not a heartbeat. */
 .g-bar{transform-box:fill-box;transform-origin:50% 50%;
-       animation:g-talk 1.5s ease-in-out infinite alternate}
-.g-bar-0{animation-delay:-.95s}
-.g-bar-1{animation-delay:-.35s}
-.g-bar-2{animation-delay:-.70s}
-.g-bar-3{animation-delay:-.15s}
-.g-bar-4{animation-delay:-.55s}
+       animation:g-talk 1.2s linear infinite}
+
+/* Why this is a sampled sine on `linear` and not two keyframes on `ease-in-out alternate`,
+   which is what it was until 2026-10-26 and read as if the animation kept lagging:
+   `ease-in-out` leaves AND arrives at zero velocity, and `alternate` makes the next swing
+   start from that same stopped end, so the two flat parts meet and every bar visibly holds
+   still at the top and at the bottom of each swing. Five bars each stalling twice a cycle is
+   the stutter, and no amount of re-timing a two-keyframe alternate removes it, because the
+   dwell is the timing function's shape rather than its duration.
+   A sine never stops; it only reverses. These are its values at eighths of a turn, which
+   `linear` then joins with straight segments. Eighths on purpose: the peak lands exactly on
+   the 25% keyframe and the trough on 75%, so neither extreme sits between two equal samples
+   where linear interpolation would reintroduce the flat spot this is here to remove. */
+@keyframes g-talk{
+  0%     {transform:scaleY(.890)}
+  12.5%  {transform:scaleY(.968)}
+  25%    {transform:scaleY(1)}
+  37.5%  {transform:scaleY(.968)}
+  50%    {transform:scaleY(.890)}
+  62.5%  {transform:scaleY(.812)}
+  75%    {transform:scaleY(.780)}
+  87.5%  {transform:scaleY(.812)}
+  100%   {transform:scaleY(.890)}
+}
 /* Floor at .78, not lower. This is a brand mark before it is a toy: at .62 the two short outer
-   pills collapse to circles and the thing stops being Gracie's logo while it moves. */
-@keyframes g-talk{from{transform:scaleY(.78)}to{transform:scaleY(1)}}
+   pills collapse to circles and the thing stops being Gracie's logo while it moves. The sine
+   is centred on .89 so that floor and a ceiling of 1 are the two ends of one swing. */
+
+/* Five close-but-unequal periods rather than one period with five offsets. With a shared
+   period the whole row re-synchronises on every cycle and the eye catches the repeat, which
+   is the other thing that makes a loop look mechanical. These do not share a common multiple
+   worth noticing, so the row keeps rearranging itself. The negative delays start each bar
+   mid-swing, so nothing lines up at load either. */
+.g-bar-0{animation-duration:1.13s;animation-delay:-.81s}
+.g-bar-1{animation-duration:1.31s;animation-delay:-.29s}
+.g-bar-2{animation-duration:1.19s;animation-delay:-.62s}
+.g-bar-3{animation-duration:1.37s;animation-delay:-.11s}
+.g-bar-4{animation-duration:1.07s;animation-delay:-.47s}
 
 @media (prefers-reduced-motion:reduce){
   .g-bar{animation:none;transform:none}
