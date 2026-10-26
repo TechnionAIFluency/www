@@ -26,88 +26,160 @@
 </ul></nav>
 <main id="main">
 <h1>Pre-work</h1>
-<section id="expected" aria-labelledby="expected-h">
+<section id="required" aria-labelledby="required-h">
 <p class="eyebrow">Prerequisite</p>
-<h2 id="expected-h">Expected complete before Week 1</h2>
-<p>Modules <code>B01</code> to <code>B08</code> are a <span class="key">prerequisite</span>, not part of the course. They are self-paced and are not taught in class. Arrive at Week 1 with them done.</p>
-<p>They are checked, not taught: the labs verify them with teaching assistants in the room, in two passes, and the Week 2 <span class="key">Setup Gate</span> closes the pre-work.</p>
+<h2 id="required-h">Three things, before Week 1</h2>
+<p>None of this is taught in the course and none of it is graded on its own. It is what Week 1 assumes you <span class="key">already have</span>, so that the first session can start on the subject instead of on installation.</p>
 <div class="table-wrap"><table>
-<caption>The two verification passes.</caption>
+<caption>What to arrive with, and why each is needed.</caption>
 <thead><tr>
-<th scope="col">Where</th>
-<th scope="col">Modules verified</th>
+<th scope="col">What</th>
+<th scope="col">Why</th>
 </tr></thead><tbody>
 <tr>
-<th scope="row">Week 1, the environment and git exercise</th>
-<td><span class="mono">B01 to B05</span></td>
+<th scope="row">Python you can read</th>
+<td>Week 1 reads agent-written Python and reviews a diff. Writing it from scratch is not asked for; following it is.</td>
 </tr>
 <tr>
-<th scope="row">Week 2, the git, GitHub and Setup Gate exercise</th>
-<td><span class="mono">B06 to B08</span></td>
+<th scope="row">A real Unix shell</th>
+<td>Every exercise session runs commands. On macOS and Linux you already have one. On Windows, WSL2 — the Windows Subsystem for Linux — is the course's shell.</td>
+</tr>
+<tr>
+<th scope="row">A GitHub account with two-factor authentication</th>
+<td>All work is delivered as pull requests. Registering the account with course staff is part of milestone P1, due Week 2.</td>
 </tr>
 </tbody></table></div>
 </section>
-<section id="modules" aria-labelledby="modules-h">
-<p class="eyebrow">Modules</p>
-<h2 id="modules-h">The eight modules</h2>
+<section id="python" aria-labelledby="python-h">
+<p class="eyebrow">First</p>
+<h2 id="python-h">Learning Python</h2>
+<p>Cover the <span class="key">fundamentals first</span> — syntax, variables, data types, operators, conditionals, exceptions, functions, loops — before anything that looks more interesting. The advanced half (comprehensions, generators, regular expressions, type hints, decorators, object-oriented programming, recursion) can wait, and style can wait longer.</p>
 <div class="table-wrap"><table>
-<caption>Pre-work modules. Each module page is linked here once it is published.</caption>
+<caption>A few places to learn it. Free, and in rough reading order.</caption>
 <thead><tr>
-<th scope="col">Module</th>
-<th scope="col">Title</th>
-<th scope="col">Covers</th>
-<th scope="col">Page</th>
+<th scope="col">Resource</th>
+<th scope="col">What it is for</th>
 </tr></thead><tbody>
 <tr>
-<th scope="row"><span class="mono">B01</span></th>
-<td>Accounts and a shell</td>
-<td>GitHub account with 2FA; OpenRouter (no card); a real Unix prompt via WSL2, Homebrew or apt; the <code>/mnt/c</code> rule.</td>
-<td><span class="note">Page to be linked when published</span></td>
+<th scope="row"><a href="https://campus.gov.il/course/course-v1-cs-gov_cs_selfpy101/">Python course in Hebrew, CAMPUS</a></th>
+<td>A free self-paced beginner course, in Hebrew. The fastest route in for most students here.</td>
 </tr>
 <tr>
-<th scope="row"><span class="mono">B02</span></th>
-<td>The terminal</td>
-<td>Paths; <code>cd</code>, <code>ls</code>, pipes, <code>$HOME</code>; editing a dotfile; reading an error down to the failing line.</td>
-<td><span class="note">Page to be linked when published</span></td>
+<th scope="row"><a href="https://docs.python.org/3/tutorial/">The official Python tutorial</a></th>
+<td>The canonical reference for the fundamentals, written by the people who made the language. Short, and it never goes out of date.</td>
 </tr>
 <tr>
-<th scope="row"><span class="mono">B03</span></th>
-<td>Identity and keys</td>
-<td><code>gh auth status</code> clean; one API key at mode 600, loaded by a guarded line.</td>
-<td><span class="note">Page to be linked when published</span></td>
+<th scope="row"><a href="https://www.youtube.com/watch?v=rfscVS0vtbw">Learn Python — Full Course for Beginners</a></th>
+<td>Four hours, free, covers the whole of the fundamentals list above in one sitting.</td>
 </tr>
 <tr>
-<th scope="row"><span class="mono">B04</span></th>
-<td>VS Code</td>
-<td>Open a folder; the integrated terminal; install an extension; edit <code>settings.json</code> as a file.</td>
-<td><span class="note">Page to be linked when published</span></td>
+<th scope="row"><a href="https://software-carpentry.org/lessons/">Software Carpentry lessons</a></th>
+<td>The Unix shell, git and Python, taught for scientists. It covers the second and third things on this page as well as the first.</td>
 </tr>
 <tr>
-<th scope="row"><span class="mono">B05</span></th>
-<td>Environments</td>
-<td>Create and activate the course environment from <code>environment.yml</code>.</td>
-<td><span class="note">Page to be linked when published</span></td>
+<th scope="row"><a href="https://numpy.org/doc/stable/user/absolute_beginners.html">NumPy: the absolute basics</a></th>
+<td>Arrays are how numbers move around an engineering project. Read this once you are comfortable with lists and loops.</td>
 </tr>
 <tr>
-<th scope="row"><span class="mono">B06</span></th>
-<td>Git by hand</td>
-<td>init, stage, commit, branch, push, pull from the command line, no GUI.</td>
-<td><span class="note">Page to be linked when published</span></td>
-</tr>
-<tr>
-<th scope="row"><span class="mono">B07</span></th>
-<td>GitHub workflow</td>
-<td>Branch; pull request; read a red check down to the failing line; squash-merge.</td>
-<td><span class="note">Page to be linked when published</span></td>
-</tr>
-<tr>
-<th scope="row"><span class="mono">B08</span></th>
-<td>Markdown, YAML, JSON</td>
-<td>Write all three by hand; validate each with a parser.</td>
-<td><span class="note">Page to be linked when published</span></td>
+<th scope="row"><a href="https://realpython.com/python-pep8/">PEP 8, the style guide</a></th>
+<td>Last, not first. Worth reading when you can already write the code it is about.</td>
 </tr>
 </tbody></table></div>
-<aside class="callout note"><p><strong class="label">Not pre-work.</strong> The harness and the sandbox wall are taught in Weeks 3 and 4, after the model of how an LLM fails from Week 2.</p></aside>
+<p>These are drawn from the research group's own <a href="https://github.com/DanaResearchGroup/wiki/wiki/python">Python page</a>, which carries the longer list, including the advanced material and the repositories to practise on.</p>
+</section>
+<section id="wsl" aria-labelledby="wsl-h">
+<p class="eyebrow">Second</p>
+<h2 id="wsl-h">A Unix shell: WSL2 on Windows</h2>
+<p>On macOS and Linux you already have a shell and there is nothing to do here. On Windows, install <strong><span class="key">WSL2</span></strong> — the Windows Subsystem for Linux. It is a real Linux running alongside Windows, not an emulator, and it is where every command in this course is typed.</p>
+<div class="table-wrap"><table>
+<caption>Installing WSL2. Seven steps, about twenty minutes, most of it the restart.</caption>
+<thead><tr>
+<th scope="col">Step</th>
+<th scope="col">Do this</th>
+<th scope="col">What it does</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">1. Check the Windows version</th>
+<td>Windows 11, or Windows 10 build 19041 and later</td>
+<td><code>winver</code> in the Start menu says which you have. Older builds need the manual install route in Microsoft's own documentation.</td>
+</tr>
+<tr>
+<th scope="row">2. Open PowerShell as administrator</th>
+<td>Start menu, right-click <strong>Windows PowerShell</strong>, then <strong>Run as administrator</strong></td>
+<td>The install writes system features, so an ordinary prompt fails here.</td>
+</tr>
+<tr>
+<th scope="row">3. Install</th>
+<td><code>wsl --install</code></td>
+<td>One command. It enables the two Windows features, installs WSL2 and installs Ubuntu.</td>
+</tr>
+<tr>
+<th scope="row">4. Restart Windows</th>
+<td>Reboot when asked</td>
+<td>The features are not active until the restart. Skipping it is the most common reason the next step appears to hang.</td>
+</tr>
+<tr>
+<th scope="row">5. Create your Linux user</th>
+<td>A username and a password, at the first Ubuntu prompt</td>
+<td>This is a Linux account, unrelated to your Windows login. The password is invisible as you type it; that is normal, not a frozen terminal. Remember it — <code>sudo</code> asks for it.</td>
+</tr>
+<tr>
+<th scope="row">6. Confirm you are on version 2</th>
+<td><code>wsl -l -v</code></td>
+<td>The VERSION column must read 2. If it reads 1, run <code>wsl --set-version Ubuntu 2</code>.</td>
+</tr>
+<tr>
+<th scope="row">7. Update the distribution</th>
+<td><code>sudo apt update &amp;&amp; sudo apt upgrade</code></td>
+<td>First thing in a fresh Ubuntu, and the first real use of the password from step 5.</td>
+</tr>
+</tbody></table></div>
+<p>Three things that catch people:</p>
+<ul><li><strong>Install fails with a virtualization error.</strong> Virtualization is switched off in the machine's firmware. Reboot into BIOS/UEFI and enable Intel VT-x or AMD-V.</li><li><strong>Keep your work in the Linux home directory</strong>, <code>~</code>, not under <code>/mnt/c</code>. Files on the Windows drive are reachable from Linux through <code>/mnt/c</code>, and everything that touches them — git, package installs, test runs — is several times slower.</li><li><strong>Use Windows Terminal</strong> rather than the standalone Ubuntu window. It ships with Windows 11 and is a free install on Windows 10, and it is what the lecturer will be typing in.</li></ul>
+</section>
+<section id="github" aria-labelledby="github-h">
+<p class="eyebrow">Third</p>
+<h2 id="github-h">A GitHub account, with two-factor authentication</h2>
+<p>Every deliverable in this course arrives as a <span class="key">pull request</span>, so the account is the first thing to exist. Registering it with the course staff is part of <a href="../project/index.html#milestones">milestone P1</a>, due in Week 2.</p>
+<div class="table-wrap"><table>
+<caption>Creating the account and securing it.</caption>
+<thead><tr>
+<th scope="col">Step</th>
+<th scope="col">Do this</th>
+<th scope="col">Why</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">1. Create the account</th>
+<td>Sign up at <a href="https://github.com/signup">github.com/signup</a></td>
+<td>Use an email address you will still have after graduation. The username appears on every pull request you open, including the ones in this course — choose one you are happy to show an employer.</td>
+</tr>
+<tr>
+<th scope="row">2. Verify the email</th>
+<td>Click the link GitHub sends</td>
+<td>An unverified account cannot be added to the course organisation.</td>
+</tr>
+<tr>
+<th scope="row">3. Install an authenticator app</th>
+<td>Google Authenticator, Microsoft Authenticator, Authy, or the one in your password manager</td>
+<td>A six-digit code app on your phone. Prefer this over SMS: text messages are the weakest second factor and GitHub says so itself.</td>
+</tr>
+<tr>
+<th scope="row">4. Turn on two-factor authentication</th>
+<td>Settings → Password and authentication → Two-factor authentication → Enable</td>
+<td>Scan the QR code with the app, then type the six digits back. GitHub requires 2FA of everyone who contributes code, so this is not optional.</td>
+</tr>
+<tr>
+<th scope="row">5. Save the recovery codes</th>
+<td>Download them and keep them somewhere that is not your phone</td>
+<td>They are the only way back in if the phone is lost. Nobody on the course staff can restore an account for you.</td>
+</tr>
+<tr>
+<th scope="row">6. Authenticate git itself</th>
+<td><code>gh auth login</code>, or add an SSH key</td>
+<td>Once 2FA is on, your password no longer works for <code>git push</code> over HTTPS. The GitHub CLI does the whole exchange for you and is the route the course uses.</td>
+</tr>
+</tbody></table></div>
+<aside class="callout note"><p><strong class="label">Keep the recovery codes.</strong> A lost phone with no recovery codes means a locked account, and the work for this course lives behind it. Save them before you need them.</p></aside>
 </section>
 </main>
 </div>
