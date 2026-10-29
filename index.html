@@ -41,10 +41,10 @@
 </section>
 <div class="band"><div class="band-inner">
 <figure class="">
-<svg class="loop" viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="loop-t loop-d">
+<svg class="loop" viewBox="-190 0 950 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="loop-t loop-d">
 <title id="loop-t">The Posture C loop</title>
-<desc id="loop-d">A closed loop of four steps. One: the model proposes inputs. Two: the deterministic, tested ground runs, with no LLM involved. Three: the model reads the results. Four: the model reasons and adjusts, then returns to step one.</desc>
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="head" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<desc id="loop-d">A closed loop of four steps. One: the model proposes inputs. Two: the deterministic, tested ground runs, with no LLM involved. Three: the model reads the results. Four: the model reasons and adjusts, then returns to step one. A human sets the goal and limits before step one, approves or redirects at a checkpoint between step four and step one, and verifies and signs off on the result.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="head" d="M 0 0 L 10 5 L 0 10 z"/></marker><marker id="ah-you" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="you-head" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
 <path class="arrow" d="M 280 82 L 474 82" marker-end="url(#ah)"/>
 <text class="alabel" x="380" y="72" text-anchor="middle">inputs</text>
 <path class="arrow" d="M 600 124 L 600 230" marker-end="url(#ah)"/>
@@ -52,7 +52,7 @@
 <path class="arrow" d="M 480 278 L 286 278" marker-end="url(#ah)"/>
 <text class="alabel" x="380" y="268" text-anchor="middle">findings</text>
 <path class="arrow" d="M 160 236 L 160 130" marker-end="url(#ah)"/>
-<text class="alabel" x="148" y="184" text-anchor="end">revised inputs</text>
+<text class="alabel" x="148" y="152" text-anchor="end">revised inputs</text>
 <g class="node"><rect x="40" y="40" width="240" height="84"/><text class="tag" x="54" y="64">01 · MODEL</text><text class="name" x="54" y="89">propose inputs</text><text class="sub" x="54" y="109">parameters, config, a hypothesis</text></g>
 <g class="node ground"><rect x="480" y="40" width="240" height="84"/><text class="tag" x="494" y="64">02 · GROUND</text><text class="name" x="494" y="89">run the ground</text><text class="sub" x="494" y="109">deterministic · tested · no LLM</text></g>
 <g class="node"><rect x="480" y="236" width="240" height="84"/><text class="tag" x="494" y="260">03 · MODEL</text><text class="name" x="494" y="285">read results</text><text class="sub" x="494" y="305">what the ground returned</text></g>
@@ -60,8 +60,11 @@
 <text class="centre" x="380" y="176" text-anchor="middle">POSTURE C</text>
 <text class="centre-sub" x="380" y="198" text-anchor="middle">a model reasoning</text>
 <text class="centre-sub" x="380" y="214" text-anchor="middle">over a tested ground</text>
+<g class="you"><text class="tag" x="-180" y="76">YOU</text><text class="role" x="-180" y="96">set goal + limits</text><path class="arrow" d="M -40 82 L 34 82" marker-end="url(#ah-you)"/></g>
+<g class="you"><path class="gate" d="M 160 186 L 168 196 L 160 206 L 152 196 Z"/><text class="tag" x="142" y="192" text-anchor="end">YOU · CHECKPOINT</text><text class="role" x="142" y="210" text-anchor="end">approve or redirect</text></g>
+<g class="you"><path class="arrow" d="M 40 278 L -34 278" marker-end="url(#ah-you)"/><text class="tag" x="-180" y="272">YOU</text><text class="role" x="-180" y="292">verify + sign off</text></g>
 </svg>
-<figcaption><span class="fignum">Fig. 1</span> The Posture C loop. Steps 01, 03 and 04 belong to the model; step 02 is deterministic, tested code with no LLM in it.</figcaption>
+<figcaption><span class="fignum">Fig. 1</span> The Posture C loop. Only step 02 has no LLM. You set the goal and limits, approve or redirect at a checkpoint, and verify and sign off.</figcaption>
 </figure>
 </div></div>
 <section id="due" aria-labelledby="due-h">

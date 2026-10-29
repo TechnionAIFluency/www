@@ -82,6 +82,11 @@ svg.loop{display:block;width:100%;height:auto;font-family:var(--mono)}
 .loop .alabel{font-size:11px;fill:var(--svg-sub)}
 .loop .centre{font-size:14px;font-weight:600;letter-spacing:.14em;fill:var(--svg-accent)}
 .loop .centre-sub{font-size:11px;fill:var(--svg-sub)}
+/* The human marks, in orange: the one colour in the figure that is not the machine's. */
+.loop .you .tag{fill:var(--orange);font-weight:600}
+.loop .you .role{font-family:var(--sans);font-size:13px;fill:var(--svg-fg)}
+.loop .you .arrow{stroke:var(--orange)}
+.loop .you-head,.loop .gate{fill:var(--orange)}
 
 /* Tables */
 .table-wrap{overflow-x:auto;margin:1.2rem 0 1.4rem}
