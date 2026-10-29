@@ -28,7 +28,7 @@
 <h1>Pre-work</h1>
 <section id="required" aria-labelledby="required-h">
 <p class="eyebrow">Prerequisite</p>
-<h2 id="required-h">Three things, before Week 1</h2>
+<h2 id="required-h">Four things, before Week 1</h2>
 <p>None of this is taught in the course and none of it is graded on its own. It is what Week 1 assumes you <span class="key">already have</span>, so that the first session can start on the subject instead of on installation.</p>
 <div class="table-wrap"><table>
 <caption>What to arrive with, and why each is needed.</caption>
@@ -43,6 +43,10 @@
 <tr>
 <th scope="row">A real Unix shell</th>
 <td>Every exercise session runs commands. On macOS and Linux you already have one. On Windows, WSL2 — the Windows Subsystem for Linux — is the course's shell.</td>
+</tr>
+<tr>
+<th scope="row"><code>uv</code></th>
+<td>One command installs Python, builds the course environment and pins every package. Install <code>uv</code> itself here; the environment is built in the Week 1 exercise session.</td>
 </tr>
 <tr>
 <th scope="row">A GitHub account with two-factor authentication</th>
@@ -137,8 +141,42 @@
 <p>Three things that catch people:</p>
 <ul><li><strong>Install fails with a virtualization error.</strong> Virtualization is switched off in the machine's firmware. Reboot into BIOS/UEFI and enable Intel VT-x or AMD-V.</li><li><strong>Keep your work in the Linux home directory</strong>, <code>~</code>, not under <code>/mnt/c</code>. Files on the Windows drive are reachable from Linux through <code>/mnt/c</code>, and everything that touches them — git, package installs, test runs — is several times slower.</li><li><strong>Use Windows Terminal</strong> rather than the standalone Ubuntu window. It ships with Windows 11 and is a free install on Windows 10, and it is what the lecturer will be typing in.</li></ul>
 </section>
-<section id="github" aria-labelledby="github-h">
+<section id="uv" aria-labelledby="uv-h">
 <p class="eyebrow">Third</p>
+<h2 id="uv-h"><code>uv</code>, which installs everything else</h2>
+<p><strong><code>uv</code></strong> is the only Python tool this course asks you to install. It downloads Python itself, builds the course environment and pins every package to an exact version — one command, <code><span class="key">uv sync</span></code>, does all three. Install <code>uv</code> here; the environment is built in the Week 1 exercise session, with teaching assistants in the room.</p>
+<div class="table-wrap"><table>
+<caption>Installing uv. Four steps, one of which is doing nothing.</caption>
+<thead><tr>
+<th scope="col">Step</th>
+<th scope="col">Do this</th>
+<th scope="col">What it does</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">1. Install it</th>
+<td><code>curl -LsSf https://astral.sh/uv/install.sh | sh</code></td>
+<td>Run it inside WSL on Windows, or in Terminal on macOS and Linux. One file lands in <code>~/.local/bin</code>; nothing is installed system-wide and no administrator password is asked for.</td>
+</tr>
+<tr>
+<th scope="row">2. Open a new shell</th>
+<td>Close the terminal and open it again, or <code>source ~/.bashrc</code></td>
+<td>The installer adds <code>~/.local/bin</code> to your <code>PATH</code>, and the shell you ran it in does not see that change. <code>uv: command not found</code> immediately after a successful install is this, every time.</td>
+</tr>
+<tr>
+<th scope="row">3. Check it</th>
+<td><code>uv --version</code></td>
+<td>A version number means you are finished. This is the whole install.</td>
+</tr>
+<tr>
+<th scope="row">4. Do not install Python</th>
+<td>Nothing to do — this is the step you skip</td>
+<td><code>uv</code> downloads and manages its own Python. Installing one yourself, or reusing an anaconda from another course, is the one way to end up with an environment nobody else in the room has.</td>
+</tr>
+</tbody></table></div>
+<ul><li><strong>Why a lockfile matters here.</strong> The course environment is described by <code>pyproject.toml</code> and pinned by <code>uv.lock</code>, which records the exact version <strong>and</strong> the hash of every package. That is not bookkeeping: this course is about a model reasoning over a ground that computes the same answer every time, and an environment that resolves differently on your machine and the lecturer's is not that ground. Measured on this course's own reference project, the combustion result is identical to the last bit across two builds of the same library version, and differs in the 11th digit across two others.</li><li><strong>You will not activate anything.</strong> Where other courses tell you to activate an environment before working, here you prefix the command: <code>uv run pytest</code>. There is no state to forget, which removes the most common reason that something that worked yesterday does not work today.</li><li><strong>About that <code>curl ... | sh</code>.</strong> It runs whatever the server sends, so it is worth knowing when that is acceptable. Once, on your own laptop, from the vendor's documented address, with you watching: fine. Unattended inside a container build that an agent then runs in: not fine, and the course's own container image deliberately does it differently. Containment is Week 4. If you would rather avoid the pipe entirely, <code>brew install uv</code> on macOS and <code>pip install uv</code> anywhere both work.</li><li><strong>Node is not needed yet.</strong> From Week 8 some MCP servers run through <code>npx</code>, which needs Node. <code>uv</code> does not manage Node, so it is a separate install — and it is done in the Week 8 session, not now.</li></ul>
+</section>
+<section id="github" aria-labelledby="github-h">
+<p class="eyebrow">Fourth</p>
 <h2 id="github-h">A GitHub account, with two-factor authentication</h2>
 <p>Every deliverable in this course arrives as a <span class="key">pull request</span>, so the account is the first thing to exist. Registering it with the course staff is part of <a href="../project/index.html#milestones">milestone P1</a>, due in Week 2.</p>
 <div class="table-wrap"><table>
