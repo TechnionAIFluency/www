@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tutorials · 00560413 AI Fluency and Agentic Methods for Engineers</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<p class="course-no">00560413</p>
+<p class="course-title">AI Fluency and Agentic Methods for Engineers</p>
+<p class="course-sub">Technion · Winter 2026–27</p>
+</header>
+<div class="layout">
+<nav aria-label="Site"><ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../syllabus/index.html">Syllabus</a></li>
+<li><a href="../schedule/index.html">Schedule</a></li>
+<li><a href="../prework/index.html">Pre-work</a></li>
+<li><a href="../project/index.html">Project</a></li>
+<li><a href="../lectures/index.html">Lectures</a></li>
+<li><a href="../exercises/index.html">Exercises</a></li>
+<li><a href="../tutorials/index.html" aria-current="page">Tutorials</a></li>
+<li><a href="../resources/index.html">Resources</a></li>
+</ul></nav>
+<main id="main">
+<h1>Tutorials</h1>
+<section id="tutorials" class="tutorials-intro" aria-labelledby="tutorials-h">
+<p class="eyebrow">Tutorials</p>
+<h2 id="tutorials-h">The slides from each exercise session</h2>
+<p>The tutorials are the weekly exercise sessions, led by the teaching assistants: Monday 10:30–12:30, Ulman 501 and 703, two groups in parallel. Each published week has its <span class="key">slides</span> here, shown in place, with the student handout and the files its activities use. What each week covers, and which milestone it builds toward, is on the <a href="../exercises/index.html">Exercises</a> page.</p>
+<p><strong>Moving through a deck.</strong> Click or tap the slides once to use them, or reach them with the Tab key. Then the arrow keys, the mouse wheel and the deck's own controls at the bottom of the slides, which appear when the pointer is over them, move through it. Until then, scrolling over the slides scrolls the page; afterwards, move the pointer off the slides or tap elsewhere on the page to scroll it again. <strong>Open slides full screen</strong> gives the deck the whole window; on a phone it is the easier way to read it.</p>
+<p>Later weeks appear here as their slides are published.</p>
+</section>
+
+<!-- One section per published week, newest last. To add the next week, copy this template, uncomment it,
+     and replace every NN, the title, the line of exercise items (copy it word for word from the week's card on
+     exercises/index.html), the deck title, the slide count, the figure number and the file list.
+     The files stay where they are published: ../exercises/wNN/. Then, on exercises/index.html, add the
+     "Slides" tag to that week in the overview and the tutorial link row to that week's card (a template is there too).
+
+<section id="wNN" class="tutorial" aria-labelledby="wNN-h">
+<p class="eyebrow">Week N</p>
+<h2 id="wNN-h"><span class="mono">WNN</span> Week title, as on the Exercises page</h2>
+<p class="tut-covers">Exercise items, separated by semicolons.</p>
+<figure class="deck">
+<div class="deck-frame"><iframe src="../exercises/wNN/WNN-slides.html" title="Week N slides: Deck title" loading="lazy" allow="fullscreen"></iframe></div>
+<figcaption><span class="fignum">Fig. N</span>The Week N deck, <em>Deck title</em>, NN slides. If it does not show here, the links below open the same files.</figcaption>
+</figure>
+<ul class="tut-actions">
+<li><a class="btn primary" href="../exercises/wNN/WNN-slides.html">Open slides full screen</a></li>
+<li><a class="btn" href="../exercises/wNN/WNN-student.html">Student handout</a></li>
+</ul>
+<h3 id="wNN-files">Activity files</h3>
+<ul class="tut-files">
+<li><a href="../exercises/wNN/FILE"><code>FILE</code></a><span>Where the session uses it</span></li>
+</ul>
+</section>
+-->
+
+<section id="w01" class="tutorial" aria-labelledby="w01-h">
+<p class="eyebrow">Week 1</p>
+<h2 id="w01-h"><span class="mono">W01</span> Environment and git</h2>
+<p class="tut-covers">Environment installation: WSL, and the harnesses; git intro: branches, staging, commit — the basics.</p>
+<figure class="deck">
+<div class="deck-frame"><iframe src="../exercises/w01/W01-slides.html" title="Week 1 slides: Your workspace" loading="lazy" allow="fullscreen"></iframe></div>
+<figcaption><span class="fignum">Fig. 1</span>The Week 1 deck, <em>Your workspace</em>, 55 slides. If it does not show here, the links below open the same files.</figcaption>
+</figure>
+<ul class="tut-actions">
+<li><a class="btn primary" href="../exercises/w01/W01-slides.html">Open slides full screen</a></li>
+<li><a class="btn" href="../exercises/w01/W01-student.html">Student handout</a></li>
+</ul>
+<h3 id="w01-files">Activity files</h3>
+<ul class="tut-files">
+<li><a href="../exercises/w01/setup_treasure.sh"><code>setup_treasure.sh</code></a><span>Part 1 · The terminal (the treasure hunt)</span></li>
+<li><a href="../exercises/w01/setup_git_quest.sh"><code>setup_git_quest.sh</code></a><span>Part 2 · Git: save points (the Git Quest)</span></li>
+<li><a href="../exercises/w01/project-proposal.md"><code>project-proposal.md</code></a><span>Part 4 · Your project topic (the proposal template)</span></li>
+</ul>
+<p>The student handout gives the exact <code>curl</code> command that downloads each file, and what to do if the download fails.</p>
+</section>
+</main>
+</div>
+<footer>
+<p>00560413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2.5 credits. Updated 2026-10-30.</p>
+</footer>
+<script>
+/* The embedded decks. Each deck turns slides on the mouse wheel and on swipes, so until the reader
+   chooses to use it, a transparent cover takes the pointer and scrolling passes to the page
+   (.is-inert in site.css). Clicking the cover, or tabbing into the deck, hands it the pointer and
+   the keyboard; moving the mouse off it, or pressing anywhere on the page, gives scrolling back.
+   Browsers do not report focus inside an iframe to the page's CSS, so the frame that holds
+   keyboard focus is also marked .is-focused for its outline. Without this script the frames
+   are plain iframes and the links below them still work. */
+(function(){
+  var frames=[].slice.call(document.querySelectorAll('.deck-frame'));
+  function rest(d){d.classList.add('is-inert');}
+  function restAll(){frames.forEach(rest);}
+  function mark(){
+    var a=document.activeElement;
+    frames.forEach(function(d){
+      var held=d.contains(a)&&a.tagName==='IFRAME';
+      d.classList.toggle('is-focused',held);
+      if(held){d.classList.remove('is-inert');}
+    });
+  }
+  frames.forEach(function(d){
+    var f=d.querySelector('iframe');
+    if(!f){return;}
+    var c=document.createElement('div');
+    c.className='deck-cover';
+    c.setAttribute('aria-hidden','true');
+    c.innerHTML='<span>Click or tap to use the slides</span>';
+    c.addEventListener('click',function(){
+      d.classList.remove('is-inert');
+      try{f.focus();f.contentWindow.focus();}catch(e){}
+    });
+    d.appendChild(c);
+    rest(d);
+    /* A link inside the deck would otherwise open the whole site inside the 16:9 frame. */
+    function retarget(){
+      try{
+        f.contentDocument.querySelectorAll('a[href]').forEach(function(a){
+          if(!a.target&&a.getAttribute('href').charAt(0)!=='#'){a.target='_top';}
+        });
+      }catch(e){}
+    }
+    f.addEventListener('load',retarget);
+    retarget();
+  });
+  /* Events on the page itself are, by definition, outside every deck's document. */
+  document.addEventListener('pointerdown',function(e){
+    if(!(e.target.closest&&e.target.closest('.deck-cover'))){restAll();}
+  });
+  document.addEventListener('pointerover',function(e){
+    if(e.pointerType==='mouse'&&!(e.target.closest&&e.target.closest('.deck-frame'))){restAll();}
+  });
+  document.addEventListener('focusin',function(e){
+    if(e.target.tagName==='IFRAME'){mark();}else{restAll();mark();}
+  });
+  window.addEventListener('blur',function(){setTimeout(mark,0);});
+  window.addEventListener('focus',function(){restAll();mark();});
+})();
+</script>
+</body>
+</html>
