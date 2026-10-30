@@ -29,7 +29,7 @@
 <section id="overview" aria-labelledby="overview-h">
 <p class="eyebrow">Overview</p>
 <h2 id="overview-h">One project, six milestones</h2>
-<p>Every student carries one Posture C project through the semester: a language model reasoning over a tested <span class="key">deterministic ground</span>, in a propose, run, read, adjust loop. The ground is a solver, simulator or evaluator in your field that the agent can call and trust. The deliverable contract has six parts.</p>
+<p>Every student carries one Approach C project through the semester: a language model reasoning over a tested <span class="key">deterministic ground</span>, in a propose, run, read, adjust loop. The ground is a solver, simulator or evaluator in your field that the agent can call and trust. The deliverable contract has six parts.</p>
 <ul><li>The agent and its wiring: harness configuration plus at least one custom tool, skill or subagent, with your ground exposed through an MCP server you author.</li><li>A real problem the loop solves: optimise, fit, search or design toward a target.</li><li>Unit tests on your ground and tools, run in CI. Unit tests only, no secrets, no live agent.</li><li>A local eval answering whether the loop reliably converges. It may call the model, so it runs locally and is not a CI gate.</li><li>A pull request submission, peer-reviewed.</li><li>A report: where you drew the line, model and cost choices, how you verified the code the agent wrote, failure modes, and your eval results.</li></ul>
 </section>
 <section id="criteria" aria-labelledby="criteria-h">
@@ -76,7 +76,7 @@
 </tbody></table></div>
 <aside class="callout warn"><p><strong class="label">Watch criterion 6.</strong> Criterion 6 is the one most candidate grounds fail, and it fails late. A ground can pass criteria 1 to 5 on day one and only show in practice that one call gives the whole answer, or that no loop of proposing and reading makes progress. You qualify your ground against all six in Week 6.</p></aside>
 <p>Auto-rejected anti-patterns:</p>
-<ul><li>Posture A: the model computes the answer itself, with no deterministic ground.</li><li>No loop: the model calls the ground once and you are done.</li><li>An ungrounded agent: much orchestration, nothing deterministic and tested underneath.</li><li>An untrustable ground: GUI-only, non-deterministic, or not unit-testable.</li><li>An unbounded ground: each run so slow the loop cannot iterate within a session.</li><li>A ground you do not understand and cannot judge the output of.</li></ul>
+<ul><li>Approach A: the model computes the answer itself, with no deterministic ground.</li><li>No loop: the model calls the ground once and you are done.</li><li>An ungrounded agent: much orchestration, nothing deterministic and tested underneath.</li><li>An untrustable ground: GUI-only, non-deterministic, or not unit-testable.</li><li>An unbounded ground: each run so slow the loop cannot iterate within a session.</li><li>A ground you do not understand and cannot judge the output of.</li></ul>
 </section>
 <section id="spec" aria-labelledby="spec-h">
 <p class="eyebrow">Specification</p>
