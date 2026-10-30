@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exercises · 00560413 AI Fluency and Agentic Methods for Engineers</title>
 <link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -21,110 +23,114 @@
 <li><a href="../prework/index.html">Pre-work</a></li>
 <li><a href="../project/index.html">Project</a></li>
 <li><a href="../lectures/index.html">Lectures</a></li>
-<li><a href="../exercises/index.html" aria-current="page">Exercises</a></li>
 <li><a href="../tutorials/index.html">Tutorials</a></li>
+<li><a href="../exercises/index.html" aria-current="page">Exercises</a></li>
 <li><a href="../resources/index.html">Resources</a></li>
 </ul></nav>
 <main id="main">
 <h1>Exercises</h1>
-<section id="exercises" aria-labelledby="exercises-h">
+<section id="exercises" class="tl-section" aria-labelledby="exercises-h">
 <p class="eyebrow">Exercises</p>
 <h2 id="exercises-h">One exercise session a week</h2>
-<p>Each session is two hours and is where project work happens: a ten-minute standup, a hundred minutes on <span class="key">your own project</span>, ten minutes to commit and disclose — the <a href="../syllabus/index.html#rhythm">weekly rhythm</a> has the minutes. Weeks 11 and 12 apply no new capability; by then you are closing one out. Each week links to its slides, shown on the <a href="../tutorials/index.html">Tutorials</a> page, once they are published.</p>
-<nav class="week-jump" aria-label="Weeks">
-<ol>
-<li><a href="#w01"><span class="wk">W01</span> <span class="tag">Slides</span></a></li>
-<li class="ms"><a href="#w02"><span class="wk">W02</span> <span class="tag">M1 due</span></a></li>
-<li><a href="#w03"><span class="wk">W03</span></a></li>
-<li class="ms"><a href="#w04"><span class="wk">W04</span> <span class="tag">M2 due</span></a></li>
-<li><a href="#w05"><span class="wk">W05</span></a></li>
-<li class="ms"><a href="#w06"><span class="wk">W06</span> <span class="tag">M3 due</span></a></li>
-<li><a href="#w07"><span class="wk">W07</span></a></li>
-<li class="ms"><a href="#w08"><span class="wk">W08</span> <span class="tag">M4 due</span></a></li>
-<li><a href="#w09"><span class="wk">W09</span></a></li>
-<li class="ms"><a href="#w10"><span class="wk">W10</span> <span class="tag">M5 due</span></a></li>
-<li><a href="#w11"><span class="wk">W11</span></a></li>
-<li class="ms"><a href="#w12"><span class="wk">W12</span> <span class="tag">M6 due</span></a></li>
-<li><a href="#w13"><span class="wk">W13</span></a></li>
-</ol>
-</nav>
-<p class="week-jump-key">Shaded weeks have a milestone due (<span class="mono">M1</span>–<span class="mono">M6</span>). <strong>Slides</strong> marks a week whose tutorial is published.</p>
-<!-- When a week's tutorial is published: add <span class="tag">Slides</span> to its tile in the overview above, and
-     add this row at the end of its card, with NN replaced (see the template on tutorials/index.html):
-<div class="week-tut">
-<p><span class="label">Tutorial</span> <a href="../tutorials/index.html#wNN">Slides</a> · <a href="wNN/WNN-student.html">Student handout</a> · <a href="../tutorials/index.html#wNN-files">Activity files</a></p>
-<p><span class="label">Files</span> <a href="wNN/FILE"><code>FILE</code></a></p>
-</div>
--->
-<div class="weeks">
-<article class="week" id="w01" aria-labelledby="w01-h">
+<p>Each session is two hours and is where project work happens: a ten-minute standup, a hundred minutes on <span class="key">your own project</span>, ten minutes to commit and disclose — the <a href="../syllabus/index.html#rhythm">weekly rhythm</a> has the minutes. Weeks 11 and 12 apply no new capability; by then you are closing one out. Each week links to its deck once that deck is published. Published decks are shown, with their handouts and files, on the <a href="../tutorials/index.html">Tutorials</a> page.</p>
+<p class="tl-key">A milestone week (<span class="mono">M1</span>–<span class="mono">M6</span>) has what falls due in a shaded box, as on the <a href="../schedule/index.html">Schedule</a><span class="tl-key-marks">, and a filled square <span class="tl-key-sq" aria-hidden="true"></span>on the rail</span>. Only weeks with published slides have a <span class="mono">Materials</span> line.</p>
+<!-- When a week's tutorial is published, add its Materials line as the last thing in its <article>, with NN replaced
+     (see the template on tutorials/index.html):
+<p class="tl-mat"><span class="label">Materials</span> <a href="../tutorials/index.html#wNN">Slides</a> · <a href="wNN/WNN-student.html">Student handout</a> · <a href="../tutorials/index.html#wNN-files">Activity files</a>:<br><a href="wNN/FILE"><code>FILE</code></a></p>
+     A milestone week has class "ms" on its <li>, class="tl-tag" data-ms="Mn" on its <h3> (the CSS draws the Mn
+     tag from it), and its milestone box (aside class="tl-due") after the list, before the Materials line. -->
+<ol class="tl">
+<li class="tl-week" id="w01">
+<article aria-labelledby="w01-h">
 <h3 id="w01-h"><span class="mono">W01</span> Environment and git</h3>
 <ul><li>Environment installation: WSL, and the harnesses</li><li>git intro: branches, staging, commit — the basics</li></ul>
-<div class="week-tut">
-<p><span class="label">Tutorial</span> <a href="../tutorials/index.html#w01">Slides</a> · <a href="w01/W01-student.html">Student handout</a> · <a href="../tutorials/index.html#w01-files">Activity files</a></p>
-<p><span class="label">Files</span> <a href="w01/setup_treasure.sh"><code>setup_treasure.sh</code></a> · <a href="w01/setup_git_quest.sh"><code>setup_git_quest.sh</code></a> · <a href="w01/project-proposal.md"><code>project-proposal.md</code></a></p>
-</div>
+<p class="tl-mat"><span class="label">Materials</span> <a href="../tutorials/index.html#w01">Slides</a> · <a href="w01/W01-student.html">Student handout</a> · <a href="../tutorials/index.html#w01-files">Activity files</a>:<br><a href="w01/setup_treasure.sh"><code>setup_treasure.sh</code></a> · <a href="w01/setup_git_quest.sh"><code>setup_git_quest.sh</code></a> · <a href="w01/project-proposal.md"><code>project-proposal.md</code></a></p>
 </article>
-<article class="week ms" id="w02" aria-labelledby="w02-h">
-<h3 id="w02-h"><span class="mono">W02</span> git, GitHub, and the Setup Gate</h3>
+</li>
+<li class="tl-week ms" id="w02">
+<article aria-labelledby="w02-h">
+<h3 id="w02-h" class="tl-tag" data-ms="M1"><span class="mono">W02</span> git, GitHub, and the Setup Gate</h3>
 <ul><li>git: worktrees, merge conflicts</li><li>GitHub: clone, pull, push</li><li>Context-window management: handoff, compact/clear, reload, the context indicator</li><li>Harness intro: OpenCode, Antigravity, Claude Code, Codex</li><li>TA demo: check-sandbox.sh walked through live — what each check means, and what it cannot prove</li><li>Setup Gate: run it yourself, then answer why each check exists</li></ul>
-<aside class="callout warn"><p><strong class="label">M1 due this week.</strong> Problem statement; GitHub user registered with course staff; first merged PR</p></aside>
+<aside class="tl-due"><p><strong class="label">M1 due this week.</strong> Problem statement; GitHub user registered with course staff; first merged PR</p></aside>
 </article>
-<article class="week" id="w03" aria-labelledby="w03-h">
+</li>
+<li class="tl-week" id="w03">
+<article aria-labelledby="w03-h">
 <h3 id="w03-h"><span class="mono">W03</span> Wire the harness</h3>
 <ul><li>The harness on your repo: run the loop end to end</li><li>Skills and hooks: write one of each</li><li>Adversarial development: demo and practice</li><li>First agent-authored commit: review a diff you did not write</li></ul>
 </article>
-<article class="week ms" id="w04" aria-labelledby="w04-h">
-<h3 id="w04-h"><span class="mono">W04</span> Build the wall</h3>
+</li>
+<li class="tl-week ms" id="w04">
+<article aria-labelledby="w04-h">
+<h3 id="w04-h" class="tl-tag" data-ms="M2"><span class="mono">W04</span> Build the wall</h3>
 <ul><li>Sandboxing in practice: install the wall</li><li>Canary probe and control: prove it actually refuses</li><li>Agent env files: write yours</li><li>Induced injection: plant a hostile file, watch it get read</li></ul>
-<aside class="callout warn"><p><strong class="label">M2 due this week.</strong> First agent-authored commit</p></aside>
+<aside class="tl-due"><p><strong class="label">M2 due this week.</strong> First agent-authored commit</p></aside>
 </article>
-<article class="week" id="w05" aria-labelledby="w05-h">
+</li>
+<li class="tl-week" id="w05">
+<article aria-labelledby="w05-h">
 <h3 id="w05-h"><span class="mono">W05</span> Your domain context pack</h3>
 <ul><li>AGENTS.md: write yours</li><li>Domain glossaries: practice</li><li>One skill file: write it and test it</li><li>Retrieval bake-off: grep against embeddings, on your own corpus</li></ul>
 </article>
-<article class="week ms" id="w06" aria-labelledby="w06-h">
-<h3 id="w06-h"><span class="mono">W06</span> Be grilled</h3>
+</li>
+<li class="tl-week ms" id="w06">
+<article aria-labelledby="w06-h">
+<h3 id="w06-h" class="tl-tag" data-ms="M3"><span class="mono">W06</span> Be grilled</h3>
 <ul><li>Be grilled, smartly: let the agent interview you for 45 minutes — and do not let it write yet</li><li>Write docs/spec.md: goal, non-goals, anti-goals, boundary, success criteria</li><li>Qualify your ground against the six criteria: a table, an honest verdict per row</li><li>Pivot clinic: a ground failing criterion 4 or 6 gets a narrow, TA-approved pivot today</li></ul>
-<aside class="callout warn"><p><strong class="label">M3 due this week.</strong> Agent environment file (<code>AGENTS.md</code>); domain glossary (<code>GLOSSARY.md</code>); one written skill; written specification (<code>docs/spec.md</code>). Last chance to consider a project revision</p></aside>
+<aside class="tl-due"><p><strong class="label">M3 due this week.</strong> Agent environment file (<code>AGENTS.md</code>); domain glossary (<code>GLOSSARY.md</code>); one written skill; written specification (<code>docs/spec.md</code>). Last chance to consider a project revision</p></aside>
 </article>
-<article class="week" id="w07" aria-labelledby="w07-h">
+</li>
+<li class="tl-week" id="w07">
+<article aria-labelledby="w07-h">
 <h3 id="w07-h"><span class="mono">W07</span> Spec → failing tests → green</h3>
 <ul><li>Unit tests, functional tests, evals: demo and practice</li><li>Spec-derived tests: write them from docs/spec.md</li><li>Tests and CI: green on GitHub Actions</li><li>Break it on purpose: find a test that still passes when the mechanism it names is deleted</li></ul>
 </article>
-<article class="week ms" id="w08" aria-labelledby="w08-h">
-<h3 id="w08-h"><span class="mono">W08</span> Your MCP server</h3>
+</li>
+<li class="tl-week ms" id="w08">
+<article aria-labelledby="w08-h">
+<h3 id="w08-h" class="tl-tag" data-ms="M4"><span class="mono">W08</span> Your MCP server</h3>
 <ul><li>Write your MCP server</li><li>The agent calls your ground, end to end</li><li>Wrap a solver: API against MCP, measured</li><li>Hallucinated dependency drill: verify every package the agent proposes before installing it</li></ul>
-<aside class="callout warn"><p><strong class="label">M4 due this week.</strong> One real engineering tool connected and in use; specification-derived tests green in CI</p></aside>
+<aside class="tl-due"><p><strong class="label">M4 due this week.</strong> One real engineering tool connected and in use; specification-derived tests green in CI</p></aside>
 </article>
-<article class="week" id="w09" aria-labelledby="w09-h">
+</li>
+<li class="tl-week" id="w09">
+<article aria-labelledby="w09-h">
 <h3 id="w09-h"><span class="mono">W09</span> Stand somewhere</h3>
 <ul><li>Declare your intervention points, and commit them</li><li>Add JSONL logging to your loop</li><li>Induce a failure, then diagnose it from the log alone</li><li>Cost run: measure tokens and spend for one full loop</li></ul>
 </article>
-<article class="week ms" id="w10" aria-labelledby="w10-h">
-<h3 id="w10-h"><span class="mono">W10</span> Build your eval, and open the red-team swap</h3>
+</li>
+<li class="tl-week ms" id="w10">
+<article aria-labelledby="w10-h">
+<h3 id="w10-h" class="tl-tag" data-ms="M5"><span class="mono">W10</span> Build your eval, and open the red-team swap</h3>
 <ul><li>Build your eval suite</li><li>First eval run, scored</li><li>Calibrate: a reliability diagram on your own predictions</li><li>Sanity-check harness: units and magnitude assertions</li><li>Red-team swap: one assigned peer, findings filed as issues — opens here, closes in week 12</li></ul>
-<aside class="callout warn"><p><strong class="label">M5 due this week.</strong> Declared intervention points; structured logging; one induced failure diagnosed from the log alone; first evaluation run</p></aside>
+<aside class="tl-due"><p><strong class="label">M5 due this week.</strong> Declared intervention points; structured logging; one induced failure diagnosed from the log alone; first evaluation run</p></aside>
 </article>
-<article class="week" id="w11" aria-labelledby="w11-h">
+</li>
+<li class="tl-week" id="w11">
+<article aria-labelledby="w11-h">
 <h3 id="w11-h"><span class="mono">W11</span> Open: project build, and the red-team exchange</h3>
 <ul><li>Reserved for project build and the red-team exchange</li></ul>
 </article>
-<article class="week ms" id="w12" aria-labelledby="w12-h">
-<h3 id="w12-h"><span class="mono">W12</span> Open: project build, and the red-team exchange</h3>
+</li>
+<li class="tl-week ms" id="w12">
+<article aria-labelledby="w12-h">
+<h3 id="w12-h" class="tl-tag" data-ms="M6"><span class="mono">W12</span> Open: project build, and the red-team exchange</h3>
 <ul><li>Reserved for project build and the red-team exchange</li></ul>
-<aside class="callout warn"><p><strong class="label">M6 due this week.</strong> Evaluation suite; red-team exchange closed with a peer; canonical run; demo; tagged release; defence pack</p></aside>
+<aside class="tl-due"><p><strong class="label">M6 due this week.</strong> Evaluation suite; red-team exchange closed with a peer; canonical run; demo; tagged release; defence pack</p></aside>
 </article>
-<article class="week" id="w13" aria-labelledby="w13-h">
+</li>
+<li class="tl-week" id="w13">
+<article aria-labelledby="w13-h">
 <h3 id="w13-h"><span class="mono">W13</span> Defence audit</h3>
 <ul><li>Defence audit: answer for your own artifacts</li><li>Peer demo review</li></ul>
 </article>
-</div>
+</li>
+</ol>
 </section>
 </main>
 </div>
 <footer>
-<p>00560413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2.5 credits. Updated 2026-10-30.</p>
+<p>00560413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2.5 credits. Updated 2026-10-31.</p>
 </footer>
 </body>
 </html>

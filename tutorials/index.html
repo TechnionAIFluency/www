@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tutorials · 00560413 AI Fluency and Agentic Methods for Engineers</title>
 <link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -21,8 +23,8 @@
 <li><a href="../prework/index.html">Pre-work</a></li>
 <li><a href="../project/index.html">Project</a></li>
 <li><a href="../lectures/index.html">Lectures</a></li>
-<li><a href="../exercises/index.html">Exercises</a></li>
 <li><a href="../tutorials/index.html" aria-current="page">Tutorials</a></li>
+<li><a href="../exercises/index.html">Exercises</a></li>
 <li><a href="../resources/index.html">Resources</a></li>
 </ul></nav>
 <main id="main">
@@ -31,21 +33,23 @@
 <p class="eyebrow">Tutorials</p>
 <h2 id="tutorials-h">The slides from each exercise session</h2>
 <p>The tutorials are the weekly exercise sessions, led by the teaching assistants: Monday 10:30–12:30, Ulman 501 and 703, two groups in parallel. Each published week has its <span class="key">slides</span> here, shown in place, with the student handout and the files its activities use. What each week covers, and which milestone it builds toward, is on the <a href="../exercises/index.html">Exercises</a> page.</p>
-<p><strong>Moving through a deck.</strong> Click or tap the slides once to use them, or reach them with the Tab key. Then the arrow keys, the mouse wheel and the deck's own controls at the bottom of the slides, which appear when the pointer is over them, move through it. Until then, scrolling over the slides scrolls the page; afterwards, move the pointer off the slides or tap elsewhere on the page to scroll it again. <strong>Open slides full screen</strong> gives the deck the whole window; on a phone it is the easier way to read it.</p>
+<p><strong>Moving through a deck.</strong> Click the slides or Tab to them, then use the arrow keys or the controls at the bottom; move the pointer off the slides to scroll the page again. <strong>Open slides full screen</strong> gives the deck the whole window. On a narrow screen, such as a phone held upright, the slides open only that way: tap the picture of the title slide.</p>
 <p>Later weeks appear here as their slides are published.</p>
 </section>
 
 <!-- One section per published week, newest last. To add the next week, copy this template, uncomment it,
      and replace every NN, the title, the line of exercise items (copy it word for word from the week's card on
      exercises/index.html), the deck title, the slide count, the figure number and the file list.
-     The files stay where they are published: ../exercises/wNN/. Then, on exercises/index.html, add the
-     "Slides" tag to that week in the overview and the tutorial link row to that week's card (a template is there too).
+     The files stay where they are published: ../exercises/wNN/. The phone still, tutorials/wNN-title.jpg, is the
+     deck's title slide at 800 x 450, under 60 KB. Then, on exercises/index.html, add the Materials line to that
+     week (a template is there too).
 
 <section id="wNN" class="tutorial" aria-labelledby="wNN-h">
 <p class="eyebrow">Week N</p>
 <h2 id="wNN-h"><span class="mono">WNN</span> Week title, as on the Exercises page</h2>
 <p class="tut-covers">Exercise items, separated by semicolons.</p>
 <figure class="deck">
+<a class="deck-still" href="../exercises/wNN/WNN-slides.html"><img src="wNN-title.jpg" width="800" height="450" loading="lazy" alt="Title slide of the Week N deck, Deck title: what the slide shows, in words"><span class="deck-still-cta">Open slides</span></a>
 <div class="deck-frame"><iframe src="../exercises/wNN/WNN-slides.html" title="Week N slides: Deck title" loading="lazy" allow="fullscreen"></iframe></div>
 <figcaption><span class="fignum">Fig. N</span>The Week N deck, <em>Deck title</em>, NN slides. If it does not show here, the links below open the same files.</figcaption>
 </figure>
@@ -65,6 +69,7 @@
 <h2 id="w01-h"><span class="mono">W01</span> Environment and git</h2>
 <p class="tut-covers">Environment installation: WSL, and the harnesses; git intro: branches, staging, commit — the basics.</p>
 <figure class="deck">
+<a class="deck-still" href="../exercises/w01/W01-slides.html"><img src="w01-title.jpg" width="800" height="450" loading="lazy" alt="Title slide of the Week 1 deck, Your workspace: Terminal, Git, your development environment; the session's four parts, terminal, git, the agent and project, on one line; the agent loop of think, request, run and report, with you directing, approving, verifying and deciding"><span class="deck-still-cta">Open slides</span></a>
 <div class="deck-frame"><iframe src="../exercises/w01/W01-slides.html" title="Week 1 slides: Your workspace" loading="lazy" allow="fullscreen"></iframe></div>
 <figcaption><span class="fignum">Fig. 1</span>The Week 1 deck, <em>Your workspace</em>, 55 slides. If it does not show here, the links below open the same files.</figcaption>
 </figure>
@@ -83,7 +88,7 @@
 </main>
 </div>
 <footer>
-<p>00560413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2.5 credits. Updated 2026-10-30.</p>
+<p>00560413 · AI Fluency and Agentic Methods for Engineers · 13 weeks · 2.5 credits. Updated 2026-10-31.</p>
 </footer>
 <script>
 /* The embedded decks. Each deck turns slides on the mouse wheel and on swipes, so until the reader
@@ -92,7 +97,8 @@
    the keyboard; moving the mouse off it, or pressing anywhere on the page, gives scrolling back.
    Browsers do not report focus inside an iframe to the page's CSS, so the frame that holds
    keyboard focus is also marked .is-focused for its outline. Without this script the frames
-   are plain iframes and the links below them still work. */
+   are plain iframes and the links below them still work. A link inside a deck opens in the
+   whole window because the deck source gives it target="_top"; nothing here re-targets it. */
 (function(){
   var frames=[].slice.call(document.querySelectorAll('.deck-frame'));
   function rest(d){d.classList.add('is-inert');}
@@ -118,16 +124,6 @@
     });
     d.appendChild(c);
     rest(d);
-    /* A link inside the deck would otherwise open the whole site inside the 16:9 frame. */
-    function retarget(){
-      try{
-        f.contentDocument.querySelectorAll('a[href]').forEach(function(a){
-          if(!a.target&&a.getAttribute('href').charAt(0)!=='#'){a.target='_top';}
-        });
-      }catch(e){}
-    }
-    f.addEventListener('load',retarget);
-    retarget();
   });
   /* Events on the page itself are, by definition, outside every deck's document. */
   document.addEventListener('pointerdown',function(e){
